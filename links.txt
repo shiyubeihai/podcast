@@ -1,0 +1,8 @@
+# 一行一个豆包播客链接。
+# 想分组就写成：专辑名 | 链接
+# 新的写在上面，列表从上往下显示。
+#
+# 下面这行是示例，换成你自己的就行：
+# 读书拆解 | https://www.doubao.com/podcast/example0000
+
+读书拆解 | https://www.doubao.com/podcast/83f66d715ed1

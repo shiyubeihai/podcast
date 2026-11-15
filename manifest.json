@@ -1,7 +1,7 @@
 {
   "name": "播客台",
   "short_name": "播客台",
-  "description": "手机本地的播客播放器：连播、倍速、断点续播、字幕同步",
+  "description": "把豆包播客链接变成自己的收听台",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

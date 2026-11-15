@@ -1,9 +1,9 @@
 /* 播客台 Service Worker
  * 只缓存外壳（html / manifest / 图标）。
- * 音频和字幕存在浏览器 IndexedDB 里，不归 SW 管。
- * 改 index.html 或样式后，必须把 VERSION +1，否则手机上还是旧版。
+ * library.json 和音频始终走网络，避免读到过期的签名地址。
+ * 改 index.html 后必须把 VERSION +1，否则手机上还是旧版。
  */
-const VERSION = '1.0.0';
+const VERSION = '2.0.0';
 const CACHE = 'podcast-' + VERSION;
 
 const ASSETS = [
@@ -25,7 +25,9 @@ self.addEventListener('install', (e) => {
 self.addEventListener('activate', (e) => {
   e.waitUntil(
     caches.keys()
-      .then((keys) => Promise.all(keys.filter((k) => k !== CACHE).map((k) => caches.delete(k))))
+      .then((keys) => Promise.all(
+        keys.filter((k) => k !== CACHE).map((k) => caches.delete(k))
+      ))
       .then(() => self.clients.claim())
   );
 });
@@ -39,7 +41,13 @@ self.addEventListener('fetch', (e) => {
   if (url.origin !== location.origin) return;
   if (url.protocol === 'blob:') return;
 
-  // 页面导航：先走网络，拿不到再用缓存（保证能更新）
+  // 清单和音频：只用网络，禁止缓存
+  if (/\/library\.json$/.test(url.pathname)) {
+    e.respondWith(fetch(req, { cache: 'no-store' }));
+    return;
+  }
+
+  // 页面导航：先走网络，拿不到再用缓存
   if (req.mode === 'navigate') {
     e.respondWith(
       fetch(req)
