@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#121110">
+<meta name="theme-color" content="#FFF6F7">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="播客台">
 <title>播客台</title>
 <link rel="manifest" href="manifest.json">
@@ -13,13 +13,15 @@
 <link rel="icon" href="icons/icon-192.png">
 <style>
 :root{
-  --bg:#121110; --panel:#1B1917; --panel2:#252220;
-  --ink:#EFE9DF; --muted:#958E86; --line:#2E2A26;
-  --accent:#D9A05B; --accent-dim:#8A6A42;
-  --warn:#C9664A;
+  --bg:#FFF6F7; --panel:#FFFFFF; --panel2:#FDEBEF;
+  --ink:#3B2B30; --muted:#9A8288; --line:#F2DDE2;
+  --accent:#C2607C; --accent-dim:#E3A9B8;
+  --accent-soft:#F8E3E8;
+  --warn:#C2544C;
   --r:16px;
 }
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+[hidden]{display:none !important}
 html,body{margin:0;height:100%}
 body{
   background:var(--bg);color:var(--ink);
@@ -44,8 +46,17 @@ b{font-weight:600}
 .icon-btn.spin{animation:spin .8s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 
+/* 专辑筛选 */
+.filters{display:flex;gap:8px;padding:0 16px 8px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.filters::-webkit-scrollbar{display:none}
+.filters .f{flex:0 0 auto;display:flex;align-items:center;gap:6px;border:1px solid var(--line);
+  background:var(--panel);color:var(--muted);border-radius:999px;padding:6px 12px;font-size:12px;min-height:30px}
+.filters .f.on{color:var(--ink);background:var(--panel2)}
+.filters .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);display:block}
+
 /* 分组 */
-.group{font-size:12px;color:var(--muted);padding:16px 4px 6px;letter-spacing:.5px}
+.group{font-size:12px;color:var(--muted);padding:16px 4px 6px;letter-spacing:.5px;display:flex;align-items:center;gap:7px}
+.group i{width:7px;height:7px;border-radius:50%;display:block}
 .group:first-child{padding-top:4px}
 
 /* 曲目卡 */
@@ -65,7 +76,15 @@ b{font-weight:600}
 .badge.bad{color:var(--warn);border-color:#5A3428}
 .pbar-mini{height:2px;background:var(--line);border-radius:1px;margin-top:6px;overflow:hidden}
 .pbar-mini i{display:block;height:100%;background:var(--accent)}
-.item .go{color:#5B554F;font-size:18px;flex:0 0 auto;width:28px;text-align:center}
+.item .go{color:var(--muted);font-size:18px;flex:0 0 auto;width:28px;text-align:center}
+.item .dl{width:38px;height:38px;display:grid;place-items:center;color:var(--muted);font-size:15px;
+  flex:0 0 auto;border-radius:50%;font-variant-numeric:tabular-nums}
+.item .dl.on{color:var(--accent)}
+.item .dl:active{background:var(--panel2)}
+
+.cachebar{display:flex;gap:10px;align-items:center;padding:14px 2px 4px;margin-top:8px;border-top:1px solid var(--line)}
+.cachebar .cacheinfo{flex:1;text-align:center;font-size:12px;color:var(--muted)}
+.cachebar .chip{min-height:30px;padding:5px 12px;font-size:12px}
 
 /* 空状态 */
 .empty{text-align:center;color:var(--muted);padding:44px 16px;font-size:14px;line-height:1.9}
@@ -81,7 +100,7 @@ b{font-weight:600}
 .artwrap{display:flex;justify-content:center;margin:auto 0 16px}
 .art{width:min(72vw,300px);aspect-ratio:1;border-radius:22px;overflow:hidden;position:relative;
      display:grid;place-items:center;font-size:72px;font-weight:700;color:#fff;
-     box-shadow:0 18px 44px rgba(0,0,0,.5),inset 0 0 0 1px rgba(255,255,255,.07)}
+     box-shadow:0 14px 34px rgba(120,70,90,.18),inset 0 0 0 1px rgba(255,255,255,.35)}
 .art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .ptext{text-align:center;margin-bottom:6px}
 .ptitle{font-size:19px;font-weight:600;line-height:1.35;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
@@ -89,17 +108,17 @@ b{font-weight:600}
 .seek{width:100%;appearance:none;-webkit-appearance:none;background:transparent;margin:14px 0 0;height:20px}
 .seek::-webkit-slider-runnable-track{height:4px;border-radius:2px;
   background:linear-gradient(90deg,var(--accent) var(--pct,0%),var(--line) var(--pct,0%))}
-.seek::-webkit-slider-thumb{appearance:none;-webkit-appearance:none;width:14px;height:14px;border-radius:50%;background:#fff;margin-top:-5px;box-shadow:0 1px 5px rgba(0,0,0,.6)}
+.seek::-webkit-slider-thumb{appearance:none;-webkit-appearance:none;width:14px;height:14px;border-radius:50%;background:var(--accent);margin-top:-5px;box-shadow:0 1px 5px rgba(120,70,90,.35)}
 .times{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums;margin-top:-2px}
 .ctrls{display:flex;align-items:center;justify-content:space-between;margin:8px 0 2px}
 .cbtn{width:44px;height:44px;display:grid;place-items:center;font-size:20px}
 .cbtn.small{font-size:12px;color:var(--muted)}
 .cbtn:active{color:var(--accent)}
-.playbtn{width:62px;height:62px;border-radius:50%;background:var(--accent);color:#241A10;font-size:22px;display:grid;place-items:center;box-shadow:0 6px 18px rgba(217,160,91,.28)}
+.playbtn{width:62px;height:62px;border-radius:50%;background:var(--accent);color:#fff;font-size:22px;display:grid;place-items:center;box-shadow:0 8px 20px rgba(194,96,124,.32)}
 .playbtn:active{transform:scale(.96)}
 .chips{display:flex;gap:8px;align-items:center;justify-content:center;margin:6px 0 auto;flex-wrap:wrap}
 .chip{border:1px solid var(--line);background:var(--panel);color:var(--muted);border-radius:999px;padding:6px 14px;font-size:12px;min-height:32px}
-.chip.on{color:var(--ink);border-color:var(--accent-dim);background:#2A2118}
+.chip.on{color:var(--accent);border-color:var(--accent-dim);background:var(--accent-soft)}
 .chip:active{background:var(--panel2)}
 
 /* 迷你条 */
@@ -114,9 +133,9 @@ b{font-weight:600}
 .mbtn{width:40px;height:40px;display:grid;place-items:center;font-size:18px}
 
 /* 弹层 */
-.sheetback{position:fixed;inset:0;background:rgba(0,0,0,.6);opacity:0;pointer-events:none;transition:opacity .18s;z-index:40}
+.sheetback{position:fixed;inset:0;background:rgba(80,45,58,.32);opacity:0;pointer-events:none;transition:opacity .18s;z-index:40}
 .sheetback.on{opacity:1;pointer-events:auto}
-.sheet{position:fixed;left:0;right:0;bottom:0;background:#201D1A;border-radius:20px 20px 0 0;
+.sheet{position:fixed;left:0;right:0;bottom:0;background:#FFFFFF;border-radius:20px 20px 0 0;
   padding:16px 16px calc(14px + env(safe-area-inset-bottom));transform:translateY(102%);
   transition:transform .22s ease;z-index:41;border-top:1px solid var(--line);max-height:80dvh;overflow-y:auto}
 .sheet.on{transform:none}
@@ -128,13 +147,15 @@ b{font-weight:600}
 .sheet input{width:100%;padding:13px;border-radius:12px;border:1px solid var(--line);background:var(--bg);
   color:var(--ink);font-size:16px;margin-bottom:10px;outline:none;font-family:inherit}
 .sheet input:focus{border-color:var(--accent-dim)}
-.sheet .btn{width:100%;padding:14px;border-radius:12px;background:var(--accent);color:#241A10;
+.sheet .btn{width:100%;padding:14px;border-radius:12px;background:var(--accent);color:#fff;
   font-size:16px;font-weight:600;margin-top:4px}
 .sheet .hint{font-size:12px;color:var(--muted);margin:-2px 0 10px;line-height:1.6}
+.sheet .hint code{background:var(--panel2);padding:1px 5px;border-radius:4px;font-size:11px}
+.sheet .linkbtn{display:block;color:var(--accent);font-size:14px;text-decoration:underline;text-underline-offset:3px;margin:2px 0 10px}
 
 /* toast */
 .toast{position:fixed;left:50%;bottom:calc(88px + env(safe-area-inset-bottom));transform:translate(-50%,10px);
-  background:rgba(38,35,31,.97);border:1px solid var(--line);color:var(--ink);padding:10px 16px;border-radius:11px;
+  background:rgba(255,255,255,.98);border:1px solid var(--line);color:var(--ink);box-shadow:0 10px 30px rgba(120,70,90,.14);padding:10px 16px;border-radius:11px;
   font-size:13px;opacity:0;pointer-events:none;transition:.2s;z-index:60;max-width:82vw;text-align:center;line-height:1.6}
 .toast.on{opacity:1;transform:translate(-50%,0)}
 
@@ -153,11 +174,17 @@ b{font-weight:600}
       <div class="brand">播客台</div>
       <div class="sub" id="sub">加载中…</div>
     </div>
-    <button class="icon-btn" id="btnAdd" aria-label="添加链接" hidden>＋</button>
+    <button class="icon-btn" id="btnAdd" aria-label="添加链接">＋</button>
     <button class="icon-btn" id="btnRefresh" aria-label="刷新清单">↻</button>
   </div>
+  <div class="filters" id="filters"></div>
   <div class="scroll">
     <div id="list"></div>
+    <div class="cachebar" id="cacheBar" hidden>
+      <button class="chip" id="btnCacheAll">缓存全部</button>
+      <span class="cacheinfo" id="cacheInfo">已存 0 集</span>
+      <button class="chip" id="btnCacheClear">清理</button>
+    </div>
     <div class="empty" id="empty" style="display:none">
       <div class="big">🎧</div>
       <b>还没有播客</b>
@@ -213,7 +240,7 @@ b{font-weight:600}
 
 <!-- 离线快照：resolve.mjs 会把最新的 library.json 写进这里。
      双击打开 html 时浏览器不允许 fetch 本地文件，就退回用这份。 -->
-<script id="lib-snapshot" type="application/json">{"schema":1,"updatedAt":"2026-11-15T13:02:45.436Z","count":1,"failed":0,"items":[{"id":"83f66d715ed1","title":"σ与 S 在 t 检验中的应用","duration":558,"audio":"https://p3-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/e01569d08b264a01b25810f47984b87b?lk3s=8e244e95&rcl=20261115190229D0C24FCCC508BEF22BCC&rrcfp=b2eaac72&x-expires=1795345573&x-signature=c9vjgmA8ouAsV68xL1GnCu6xFCQ%3D","cover":"https://p11-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/fe42c960c58a452d8aa60323d38c8b25~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=20261115190229D0C24FCCC508BEF22BCC&rrcfp=64220c93&x-expires=1795345362&x-signature=4OH58bIn%2B%2BxAFIjfy8lv4LtVWqc%3D","expires":1795345573,"ok":true,"album":"读书拆解","link":"https://www.doubao.com/podcast/83f66d715ed1"}]}</script>
+<script id="lib-snapshot" type="application/json">{"schema":1,"updatedAt":"2026-11-16T05:26:51.041Z","count":29,"failed":0,"items":[{"id":"b923f684efea","title":"01 听觉单位系统的层次框架","duration":716,"audio":"https://p3-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/e32b138e3a4d4670b0931bf2adf314a9?lk3s=8e244e95&rcl=20261115112422C74B1127AC8307BEFA9A&rrcfp=b2eaac72&x-expires=1795318152&x-signature=HebLxlZXvOwQepRPlng5jgSymgE%3D","cover":"https://p26-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/666110ce510b4ec7a55bd441bceaf8f0~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=20261115112422C74B1127AC8307BEFA9A&rrcfp=64220c93&x-expires=1795317875&x-signature=Mzgp7qmME2l5SoquXG9B0dxbRNI%3D","expires":1795318152,"ok":true,"album":"普通心理学","link":"https://www.doubao.com/podcast/b923f684efea"},{"id":"d20519a2475a","title":"02 特征分析理论的经典实验","duration":606,"audio":"https://p9-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/f4d44ec9e24a495d8dd9016d702c769f?lk3s=8e244e95&rcl=20261115112441F0891D6BC40A7BBEC739&rrcfp=b2eaac72&x-expires=1795318131&x-signature=kwy0bU6n1aEnGPXsridlzGmyYp0%3D","cover":"https://p6-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/2c0f57a874ca4461b23b61a4f3ca27b0~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=20261115112441F0891D6BC40A7BBEC739&rrcfp=64220c93&x-expires=1795317896&x-signature=Z9uXXPHpHtHRoircT8fr5UbeLmM%3D","expires":1795318131,"ok":true,"album":"普通心理学","link":"https://www.doubao.com/podcast/d20519a2475a"},{"id":"637f15a4d93a","title":"03 特征整合理论：特征如何整合与绑定","duration":549,"audio":"https://p9-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/f14b33e48cfd4517a28e970d886b6525?lk3s=8e244e95&rcl=20261115110412D08C1E36D17951BCAB11&rrcfp=b2eaac72&x-expires=1795316885&x-signature=PQgUx8gxhCOP9Slxjas9dmevkcQ%3D","cover":"https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/9c925c825e7d4f3499eb8cfcd07ae84e~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=20261115110412D08C1E36D17951BCAB11&rrcfp=64220c93&x-expires=1795316666&x-signature=Vgq6aQPNZ0PyrCpyKJdesZC5RVg%3D","expires":1795316885,"ok":true,"album":"普通心理学","link":"https://www.doubao.com/podcast/637f15a4d93a"},{"id":"e40b7300d0b4","title":"04 模式识别理论：高频考点与结合方向","duration":678,"audio":"https://p3-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/5ce2e7154e4f468190093df98ac77314?lk3s=8e244e95&rcl=202611151122467BD0BFA31DC09CBE868D&rrcfp=b2eaac72&x-expires=1795318040&x-signature=i78W0OLQnPANxIXLVA0HZXTmsQ0%3D","cover":"https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/17f09ce426ee46ba9f10e6b6c38a2600~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=202611151122467BD0BFA31DC09CBE868D&rrcfp=64220c93&x-expires=1795317778&x-signature=Hbe5P7VXiEMJxwsnjjWIWI%2FxIiI%3D","expires":1795318040,"ok":true,"album":"普通心理学","link":"https://www.doubao.com/podcast/e40b7300d0b4"},{"id":"22f489a0b9fb","title":"05 梳理注意的认知理论","duration":539,"audio":"https://p26-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/35ea3d876b744b9084609d7f0ddebf9d?lk3s=8e244e95&rcl=2026111514102244E4626DA743F4D1566A&rrcfp=b2eaac72&x-expires=1795328050&x-signature=Ji5fpj6EwC8av%2Fxxqmv2v96TNkQ%3D","cover":"https://p26-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/66c5f0a0da734ac1956eb579eb037e88~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=2026111514102244E4626DA743F4D1566A&rrcfp=64220c93&x-expires=1795327832&x-signature=iDy8SQeT4mYVBzz8MTnoAWHAZQc%3D","expires":1795328050,"ok":true,"album":"普通心理学","link":"https://www.doubao.com/podcast/22f489a0b9fb"},{"id":"8606a26d4515","title":"06 推理中常见的系统性偏差","duration":1052,"audio":"https://p9-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/9c2e5577364b42738b64b886d4c79d3b?lk3s=8e244e95&rcl=2026111511143656C03F43BE19D3BD7E9B&rrcfp=b2eaac72&x-expires=1795317714&x-signature=Vxg%2FS2zZ1AdP%2BZC%2Bth2AZ9%2F4wEk%3D","cover":"https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/d5ffc15cdc8049169c47621d1b82a81b~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=2026111511143656C03F43BE19D3BD7E9B&rrcfp=64220c93&x-expires=1795317291&x-signature=mp96P7J7SFiqtcL1iPrPB4MLN7g%3D","expires":1795317714,"ok":true,"album":"普通心理学","link":"https://www.doubao.com/podcast/8606a26d4515"},{"id":"260b897f1d11","title":"07 梳理「影响问题解决的因素」","duration":565,"audio":"https://p6-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/cb7cfdede5284f2d8c6e4e0b1c6768ce?lk3s=8e244e95&rcl=202611151123107CE307BDD19A27BD1A9C&rrcfp=b2eaac72&x-expires=1795318017&x-signature=n7573DwN5CxWlQOnXE8tGBbbB1E%3D","cover":"https://p26-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/34e8ead56f094169bf62b4c497d5a046~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=202611151123107CE307BDD19A27BD1A9C&rrcfp=64220c93&x-expires=1795317803&x-signature=Ibrg9EMqnbcyfT1ex4IkoHlgd30%3D","expires":1795318017,"ok":true,"album":"普通心理学","link":"https://www.doubao.com/podcast/260b897f1d11"},{"id":"f18395e7272e","title":"08 动机理论的四大关键理论解析","duration":998,"audio":"https://p3-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/674107d0bb2f476095a077e3d94e506f?lk3s=8e244e95&rcl=20261115110748B40D04F2613765B97A9F&rrcfp=b2eaac72&x-expires=1795317280&x-signature=Sq5X7RDV1a13MsXp0T27p6X9uDU%3D","cover":"https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/945f5de757e049eda0eeb9fcfaeac081~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=20261115110748B40D04F2613765B97A9F&rrcfp=64220c93&x-expires=1795316882&x-signature=9uiOj1MkIyauYzd4SY4ZQkMjodk%3D","expires":1795317280,"ok":true,"album":"普通心理学","link":"https://www.doubao.com/podcast/f18395e7272e"},{"id":"0d0a61338b9a","title":"09 动机理论的「新」发展梳理","duration":665,"audio":"https://p6-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/59297b02bf8b47d3a155898286a68251?lk3s=8e244e95&rcl=2026111511032780B66C23B4F6F2B6FD5D&rrcfp=b2eaac72&x-expires=1795316874&x-signature=GxpZWdqN9XT9M%2Bv5q%2F%2BEkXViGqU%3D","cover":"https://p11-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/5662c130d567448b8e371095d9996ec0~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=2026111511032780B66C23B4F6F2B6FD5D&rrcfp=64220c93&x-expires=1795316621&x-signature=7kODIPV7w%2FYyR%2F5fewv9R3GzQwk%3D","expires":1795316874,"ok":true,"album":"普通心理学","link":"https://www.doubao.com/podcast/0d0a61338b9a"},{"id":"e0d8237a0555","title":"10 新兴动机理论与游戏化学习（拓展）","duration":416,"audio":"https://p3-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/0391407b8ca340b58e6dd756c6b8a9ed?lk3s=8e244e95&rcl=20261115105848E2EA6A972CDD0DBC62B6&rrcfp=b2eaac72&x-expires=1795316501&x-signature=M2y3dcweNgefsDA4Bj6sTYDSCI0%3D","cover":"https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/c381149cf6794ea29c9110819fc3030e~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=20261115105848E2EA6A972CDD0DBC62B6&rrcfp=64220c93&x-expires=1795316338&x-signature=X48TmZ2Uy3EyFN6eZ7r45o4oVN8%3D","expires":1795316501,"ok":true,"album":"普通心理学","link":"https://www.doubao.com/podcast/e0d8237a0555"},{"id":"a569531cb256","title":"11 情绪理论：从生理到认知的演进（一）","duration":921,"audio":"https://p3-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/da1baef3f790466faad24ca3ac28693b?lk3s=8e244e95&rcl=202611151058339C30ED75C696A8BA3075&rrcfp=b2eaac72&x-expires=1795316675&x-signature=RgiWifRIRDToJsBSZxJxOmlx%2BLQ%3D","cover":"https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/1ac1fa1bed95431d83ad01000aaaa743~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=202611151058339C30ED75C696A8BA3075&rrcfp=64220c93&x-expires=1795316324&x-signature=jetomP6GgQSgre1M6AEtWFk3sDs%3D","expires":1795316675,"ok":true,"album":"普通心理学","link":"https://www.doubao.com/podcast/a569531cb256"},{"id":"0602f5c54dbc","title":"12 情绪理论：从生理到认知的演进（二）","duration":940,"audio":"https://p9-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/b7ebd79ccb6c4582b9eae3f369643e3d?lk3s=8e244e95&rcl=20261115105922F90034BC8B300BBA454E&rrcfp=b2eaac72&x-expires=1795316743&x-signature=A2RSqD5nJL3H4p469fVmqaSDO5k%3D","cover":"https://p26-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/7741ad0c47fd4149a2bc8ed08d02b35a~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=20261115105922F90034BC8B300BBA454E&rrcfp=64220c93&x-expires=1795316375&x-signature=P4kyzcQKQSxFlCWZOOthIMJ9VQQ%3D","expires":1795316743,"ok":true,"album":"普通心理学","link":"https://www.doubao.com/podcast/0602f5c54dbc"},{"id":"56809e2647e6","title":"13 智力的主要理论梳理","duration":643,"audio":"https://p3-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/2847b2f6ca984fb086f749c2056c8a2f?lk3s=8e244e95&rcl=2026111510575177201E56F20F4BBB2E9B&rrcfp=b2eaac72&x-expires=1795316537&x-signature=OD%2FeZGocwFDOmc0h9Yvuebwi5iY%3D","cover":"https://p26-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/4444c48b9ebe44c7a5888a13b145dd6d~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=2026111510575177201E56F20F4BBB2E9B&rrcfp=64220c93&x-expires=1795316283&x-signature=2aQFs9vaq6np4KJwKdHW%2BVjKqpU%3D","expires":1795316537,"ok":true,"album":"普通心理学","link":"https://www.doubao.com/podcast/56809e2647e6"},{"id":"ac4376ef7c34","title":"14 经典条件与操作条件全面对比","duration":589,"audio":"https://p26-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/721de9fba33f472dbaa58de84a2b4012?lk3s=8e244e95&rcl=20261115151412113D3DF162F9E9D69E13&rrcfp=b2eaac72&x-expires=1795331890&x-signature=yUNGe9FEpzO%2FthV0orl6qBSsVdE%3D","cover":"https://p26-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/96c4cd51925640a0969e5992e257e552~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=20261115151412113D3DF162F9E9D69E13&rrcfp=64220c93&x-expires=1795331668&x-signature=kaD6NSbDt51zsdPs54Pbwx74Il0%3D","expires":1795331890,"ok":true,"album":"普通心理学","link":"https://www.doubao.com/podcast/ac4376ef7c34"},{"id":"6e1d149dfb96","title":"01 皮亚杰与维果茨基理论比较","duration":857,"audio":"https://p3-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/5dcbf45474ad435bbd50268843bd6224?lk3s=8e244e95&rcl=2026111514065403D440F248599CCCBD95&rrcfp=b2eaac72&x-expires=1795327967&x-signature=EBuO1DK8rzaYBBcwzqg%2FNWRsSO8%3D","cover":"https://p26-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/bcccef07a09a42ffa499faa0290bb871~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=2026111514065403D440F248599CCCBD95&rrcfp=64220c93&x-expires=1795327627&x-signature=ZkRr%2BHqG9O2Mdc2Qgr51YlgRPMw%3D","expires":1795327967,"ok":true,"album":"发展心理学","link":"https://www.doubao.com/podcast/6e1d149dfb96"},{"id":"beb8a043efcf","title":"01 学习策略的分类及相互关系","duration":439,"audio":"https://p3-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/a2db70908068461a8218ff3f069ab91d?lk3s=8e244e95&rcl=20261115142757DBAC42F39433F7D841D4&rrcfp=b2eaac72&x-expires=1795329057&x-signature=6q8ANSNBIFKUV3RuuJpc%2B7KNY90%3D","cover":"https://p11-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/0a4e3c788a984151a4abc497b404996f~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=20261115142757DBAC42F39433F7D841D4&rrcfp=64220c93&x-expires=1795328888&x-signature=mEftFynS%2BrtkCWQFpAGgHcYs4Vk%3D","expires":1795329057,"ok":true,"album":"教育心理学","link":"https://www.doubao.com/podcast/beb8a043efcf"},{"id":"36349158bbab","title":"02 布鲁姆与加涅教学目标对比","duration":606,"audio":"https://p3-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/38840927551540d68fa4b05e38a2089f?lk3s=8e244e95&rcl=20261115145126E5A5EEA0943F18D6D6E5&rrcfp=b2eaac72&x-expires=1795330526&x-signature=H%2FYT8AjBViAVuTufjItc6gl3i1o%3D","cover":"https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/aac9f7b12c0a46c098e7bf05a1356b73~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=20261115145126E5A5EEA0943F18D6D6E5&rrcfp=64220c93&x-expires=1795330297&x-signature=BnYxKMauY%2B35PYRWkWwdqFRw%2Ffg%3D","expires":1795330526,"ok":true,"album":"教育心理学","link":"https://www.doubao.com/podcast/36349158bbab"},{"id":"d5d3c6a1b30c","title":"01 信度与五种误差","duration":592,"audio":"https://p3-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/71cf7819bd6b46cbbf128b2432fdbd00?lk3s=8e244e95&rcl=202611161139065D866DB7F0A36A41A354&rrcfp=b2eaac72&x-expires=1795405368&x-signature=%2Fh9HKyYd4F5BxX2NMgeS%2FplNPm4%3D","cover":"https://p6-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/c68e87bbfb924fe8b8661e21fcd9d3e1~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=202611161139065D866DB7F0A36A41A354&rrcfp=64220c93&x-expires=1795405159&x-signature=AvptAtCCC5aebpkqxngj5aweqEE%3D","expires":1795405368,"ok":true,"album":"心理统计与测量","link":"https://www.doubao.com/podcast/d5d3c6a1b30c"},{"id":"6fe64e8d9239","title":"02 复本信度","duration":287,"audio":"https://p6-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/992dc72e8066414491a94343e37fc8c9?lk3s=8e244e95&rcl=20261116120008AE6CAB2AEA96653FEBFD&rrcfp=b2eaac72&x-expires=1795406537&x-signature=der0s3j6oGiLP93LiTzKtcGrSZk%3D","cover":"https://p26-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/cc7820c708954dc985bb5a599f306222~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=20261116120008AE6CAB2AEA96653FEBFD&rrcfp=64220c93&x-expires=1795406421&x-signature=4yG%2FqAZRP4kR4jd7wuoMisz0V4g%3D","expires":1795406537,"ok":true,"album":"心理统计与测量","link":"https://www.doubao.com/podcast/6fe64e8d9239"},{"id":"4c954283d8a6","title":"03 α 系数（同质性信度）","duration":342,"audio":"https://p26-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/53ab99a5ed6a4b9c8665d8f82051596d?lk3s=8e244e95&rcl=20261116120837924F45CAE278513DFE6D&rrcfp=b2eaac72&x-expires=1795407054&x-signature=BuDsSZG%2B2ErX%2B2pbyo1fQCks%2Fvo%3D","cover":"https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/6590734e6f68436b8fd8401985371907~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=20261116120837924F45CAE278513DFE6D&rrcfp=64220c93&x-expires=1795406928&x-signature=KHlU6%2BBsxtAnvWRyRWchEhrXkW4%3D","expires":1795407054,"ok":true,"album":"心理统计与测量","link":"https://www.doubao.com/podcast/4c954283d8a6"},{"id":"bf63a60303a4","title":"04 效度与信度的关系及记忆口诀","duration":258,"audio":"https://p6-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/c8e569bd5acd4a40863d7a56793042ff?lk3s=8e244e95&rcl=20261115174408F67640BDE7AFF9E882A5&rrcfp=b2eaac72&x-expires=1795340756&x-signature=gxjg2K9SF98O9VnnzQLc47Y%2F0d0%3D","cover":"https://p11-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/6d129f592f6d48a58100b97e344ed023~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=20261115174408F67640BDE7AFF9E882A5&rrcfp=64220c93&x-expires=1795340663&x-signature=77p7UTZB9qDIGGyTCD%2Fj8o%2FYBwM%3D","expires":1795340756,"ok":true,"album":"心理统计与测量","link":"https://www.doubao.com/podcast/bf63a60303a4"},{"id":"f21458d8cc4e","title":"05 常模","duration":858,"audio":"https://p6-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/04cfda3b27a0422fbd655b866807eed4?lk3s=8e244e95&rcl=2026111612105237F7D8F4BA557847BABC&rrcfp=b2eaac72&x-expires=1795407372&x-signature=mL8rSx7SArLpBGA3qymStwPEkco%3D","cover":"https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/9c42b5b45f9d4d68a58f296d02ddd5bc~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=2026111612105237F7D8F4BA557847BABC&rrcfp=64220c93&x-expires=1795407065&x-signature=x804ZE0IlgWGKBq4NySAJxwKKOg%3D","expires":1795407372,"ok":true,"album":"心理统计与测量","link":"https://www.doubao.com/podcast/f21458d8cc4e"},{"id":"522d500a714e","title":"06 标准误及其用途","duration":511,"audio":"https://p3-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/1c4b4150008f4c4e909803e93fd5cca7?lk3s=8e244e95&rcl=20261115185707A81F8DB58BA3C4F20CCA&rrcfp=b2eaac72&x-expires=1795345230&x-signature=O0fJQdOmkCK7xt18RT3ghOmw2%2BA%3D","cover":"https://p11-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/4c307887d72641dc8d65a49d122ebfcf~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=20261115185707A81F8DB58BA3C4F20CCA&rrcfp=64220c93&x-expires=1795345041&x-signature=dvvR6RRMm4D15Fu3qg%2BekcxgG9k%3D","expires":1795345230,"ok":true,"album":"心理统计与测量","link":"https://www.doubao.com/podcast/522d500a714e"},{"id":"0b9c9aa9d7e7","title":"07 假设检验：从框架到考点","duration":597,"audio":"https://p9-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/961e32284d8a4b04b1f1376e56b5707d?lk3s=8e244e95&rcl=20261115184848352C4F47577654F12400&rrcfp=b2eaac72&x-expires=1795344777&x-signature=NLRNbaXa5kidRsZ0hzk7U9OMmWc%3D","cover":"https://p11-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/36a6f462862d41c8bde79e1768c8e07f~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=20261115184848352C4F47577654F12400&rrcfp=64220c93&x-expires=1795344542&x-signature=AEQVOYM2s7T7H1Fp5l04IvZQJqk%3D","expires":1795344777,"ok":true,"album":"心理统计与测量","link":"https://www.doubao.com/podcast/0b9c9aa9d7e7"},{"id":"83f66d715ed1","title":"08 σ 与 S 在 t 检验中的应用","duration":558,"audio":"https://p3-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/e01569d08b264a01b25810f47984b87b?lk3s=8e244e95&rcl=20261115190229D0C24FCCC508BEF22BCC&rrcfp=b2eaac72&x-expires=1795345573&x-signature=c9vjgmA8ouAsV68xL1GnCu6xFCQ%3D","cover":"https://p11-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/fe42c960c58a452d8aa60323d38c8b25~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=20261115190229D0C24FCCC508BEF22BCC&rrcfp=64220c93&x-expires=1795345362&x-signature=4OH58bIn%2B%2BxAFIjfy8lv4LtVWqc%3D","expires":1795345573,"ok":true,"album":"心理统计与测量","link":"https://www.doubao.com/podcast/83f66d715ed1"},{"id":"5f36bcd15e83","title":"09 三种 t 检验","duration":1147,"audio":"https://p6-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/ebf8859f61794381a5d9b3067399dec0?lk3s=8e244e95&rcl=2026111612154522344A9314D0453EDEA8&rrcfp=b2eaac72&x-expires=1795407837&x-signature=sNXzqf9f%2BIjOQE1L50BW1uXDQcI%3D","cover":"https://p26-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/bbb046c73dc941119fdeb6c2648bd1a9~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=2026111612154522344A9314D0453EDEA8&rrcfp=64220c93&x-expires=1795407358&x-signature=ZkPW01HctAA2G2Cfy8aor27rPMk%3D","expires":1795407837,"ok":true,"album":"心理统计与测量","link":"https://www.doubao.com/podcast/5f36bcd15e83"},{"id":"e211dafab371","title":"10 不同样本的 t 检验怎么用","duration":432,"audio":"https://p6-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/c105a46a830d47bb93ae88db2ce699bc?lk3s=8e244e95&rcl=202611161217018E1318713E31943C3587&rrcfp=b2eaac72&x-expires=1795407580&x-signature=wrXcRUHmfSn7%2BdiL%2FopbJlaB1S8%3D","cover":"https://p11-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/52a84e3a023f4dc7ab161fed53fdbf64~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=202611161217018E1318713E31943C3587&rrcfp=64220c93&x-expires=1795407432&x-signature=3QypP3qOH1984PurQli1GZjZdsQ%3D","expires":1795407580,"ok":true,"album":"心理统计与测量","link":"https://www.doubao.com/podcast/e211dafab371"},{"id":"00a4d78cf5b6","title":"11 理解决定系数的含义","duration":382,"audio":"https://p9-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/d9fe94967fa347d9852666655ac70cde?lk3s=8e244e95&rcl=2026111517472359AE763F16A8A8E87930&rrcfp=b2eaac72&x-expires=1795340993&x-signature=OC4L1yM7Ji0rrUVHTPqNbnDm7uA%3D","cover":"https://p6-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/149717dd33ae4edbb9052810659e884c~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=2026111517472359AE763F16A8A8E87930&rrcfp=64220c93&x-expires=1795340860&x-signature=e7qS5wlFIUvXpc8YZEEMqt8Vm3o%3D","expires":1795340993,"ok":true,"album":"心理统计与测量","link":"https://www.doubao.com/podcast/00a4d78cf5b6"},{"id":"745e64aad117","title":"12 心理统计与测量重点梳理","duration":285,"audio":"https://p3-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/47761d1fee2c4a26939ceaf19da4f0ac?lk3s=8e244e95&rcl=2026111518462139606F6F6AF59EF067AA&rrcfp=b2eaac72&x-expires=1795344495&x-signature=%2FkkJtbABUmPCXv69SxMmE8V1Vvw%3D","cover":"https://p26-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/6e6a4a0f7e8c4d54a7f73b192431e3d3~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=2026111518462139606F6F6AF59EF067AA&rrcfp=64220c93&x-expires=1795344393&x-signature=PzteQmTOS87jWQHiDwfwsEbxqcY%3D","expires":1795344495,"ok":true,"album":"心理统计与测量","link":"https://www.doubao.com/podcast/745e64aad117"}]}</script>
 
 <script>
 (function(){
@@ -241,6 +268,9 @@ let switching = false;
 let lastSave = 0;
 let navDepth = 0;
 let miniFor = null;
+let curUrl = null;
+let curFromCache = false;
+let filterAlbum = null;
 const restore = { lastTried: false };
 
 const au = $('au');
@@ -381,9 +411,56 @@ function buildGroups(){
   queue = groups.flatMap(g => g.list);
 }
 
+/* ---------- 专辑配色 ---------- */
+const ALBUM_COLORS = {
+  '普通心理学':      { main: '#4E86B0', soft: '#E6F1F9', dim: '#A9C8DE' },
+  '发展心理学':      { main: '#C0763D', soft: '#FBEDE1', dim: '#E5B895' },
+  '教育心理学':      { main: '#C0763D', soft: '#FBEDE1', dim: '#E5B895' },
+  '心理统计与测量':  { main: '#C2607C', soft: '#F8E3E8', dim: '#E3A9B8' }
+};
+function albumColor(name){
+  return ALBUM_COLORS[name] || { main: '#C2607C', soft: '#F8E3E8', dim: '#E3A9B8' };
+}
+
 /* ---------- 列表渲染 ---------- */
 function isMulti(){
   return groups.length > 1 || !!(groups[0] && groups[0].album !== '未分组');
+}
+
+function visibleGroups(){
+  return filterAlbum ? groups.filter((g) => g.album === filterAlbum) : groups;
+}
+
+function renderFilters(){
+  const box = $('filters');
+  if(!box) return;
+  box.innerHTML = '';
+  if(groups.length < 2){ box.style.display = 'none'; return; }
+  box.style.display = 'flex';
+
+  const mk = (label, album, dotColor) => {
+    const b = document.createElement('button');
+    b.className = 'f' + (filterAlbum === album ? ' on' : '');
+    if(dotColor){
+      const i = document.createElement('i');
+      i.className = 'dot';
+      i.style.background = dotColor;
+      b.appendChild(i);
+    }
+    b.appendChild(document.createTextNode(label));
+    if(filterAlbum === album && dotColor) b.style.borderColor = dotColor;
+    b.addEventListener('click', () => {
+      filterAlbum = album;
+      renderAll();
+      $('list').scrollTop = 0;
+    });
+    return b;
+  };
+
+  box.appendChild(mk('全部 ' + items.length, null, null));
+  for(const g of groups){
+    box.appendChild(mk(g.album + ' ' + g.list.length, g.album, albumColor(g.album).main));
+  }
 }
 
 function renderList(){
@@ -391,17 +468,27 @@ function renderList(){
   box.innerHTML = '';
   $('empty').style.display = items.length ? 'none' : 'block';
 
-  const multi = isMulti();
+  renderFilters();
 
-  for(const g of groups){
+  const list = visibleGroups();
+  const multi = list.length > 1;
+  queue = list.flatMap((g) => g.list);
+
+  for(const g of list){
+    const c = albumColor(g.album);
     if(multi){
       const h = document.createElement('div');
       h.className = 'group';
-      h.textContent = g.album + ' · ' + g.list.length;
+      const dot = document.createElement('i');
+      dot.style.background = c.main;
+      h.appendChild(dot);
+      h.appendChild(document.createTextNode(g.album + ' · ' + g.list.length));
       box.appendChild(h);
     }
     for(const it of g.list) box.appendChild(itemEl(it));
   }
+
+  updateCacheInfo();
 }
 
 function itemEl(it){
@@ -414,31 +501,46 @@ function itemEl(it){
   const p = prog[it.id] || 0;
   const pct = dur ? Math.min(100, p / dur * 100) : 0;
   const done = dur && p >= dur - 5;
-  const bad = !it.ok || expired(it);
+  const pending = !!it.pending;
+  const bad = !pending && (!it.ok || expired(it));
 
   const metaBits = [];
   if(dur) metaBits.push(fmtLong(dur));
   if(it.album && it.album !== '未分组' && !isMulti()) metaBits.push(it.album);
-  if(bad) metaBits.push('<span class="badge bad">地址过期</span>');
+  if(pending) metaBits.push('<span class="badge">待补链接</span>');
+  else if(bad) metaBits.push('<span class="badge bad">地址过期</span>');
   else if(done) metaBits.push('<span class="badge done">已听完</span>');
   else if(pct > 0.5) metaBits.push(Math.round(pct) + '%');
 
+  const ac = albumColor(it.album);
+
+  const covStyle = pending
+    ? 'background:linear-gradient(150deg,#F7E7EA,#E9D4DA);color:#B98A97;box-shadow:inset 0 0 0 2px ' + ac.dim
+    : 'background:' + coverBg(it.id) + ';box-shadow:inset 0 0 0 2px ' + ac.dim;
+  const covChar = pending ? '待' : ((it.title || '播')[0] || '播');
+  const playingColor = (it.id === curId && !au.paused) ? ' style="color:' + ac.main + '"' : '';
+
   el.innerHTML =
-    '<div class="cov" style="background:' + coverBg(it.id) + '">' +
-      '<span>' + esc((it.title || '播')[0]) + '</span>' +
+    '<div class="cov" style="' + covStyle + '">' +
+      '<span>' + esc(covChar) + '</span>' +
       (it.cover ? '<img src="' + esc(it.cover) + '" alt="" loading="lazy" referrerpolicy="no-referrer">' : '') +
     '</div>' +
     '<div class="info">' +
-      '<b>' + esc(it.title) + '</b>' +
+      '<b' + playingColor + '>' + esc(it.title) + '</b>' +
       '<div class="meta">' + metaBits.join(' · ') + '</div>' +
       (pct > 0.5 && !bad ? '<div class="pbar-mini"><i style="width:' + pct + '%"></i></div>' : '') +
     '</div>' +
-    '<div class="go">' + (it.id === curId ? (au.paused ? '▶' : '❚❚') : '›') + '</div>';
+    '<button class="dl' + (cacheIdx[it.id] ? ' on' : '') + '" aria-label="缓存到手机">' +
+      dlLabel(it) + '</button>';
 
   const img = el.querySelector('.cov img');
   if(img) img.addEventListener('error', () => img.remove());
 
   el.addEventListener('click', () => play(it.id));
+  el.querySelector('.dl').addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleDownload(it);
+  });
   return el;
 }
 
@@ -446,12 +548,24 @@ function itemEl(it){
 function renderPlayer(){
   const it = current();
   if(!it){
+    const pv0 = $('v-player');
+    pv0.style.setProperty('--accent', '#C2607C');
+    pv0.style.setProperty('--accent-dim', '#E3A9B8');
+    pv0.style.setProperty('--accent-soft', '#F8E3E8');
+    pv0.style.background = 'linear-gradient(180deg,#FFFFFF 0%,#F8E3E8 100%)';
     $('pTitle').textContent = '未在播放';
     $('pSub').textContent = '从列表里选一集';
     $('pAlbum').textContent = '播客台';
     return;
   }
   const idx = queue.findIndex(x => x.id === it.id);
+  const ac = albumColor(it.album);
+  const pv = $('v-player');
+  pv.style.setProperty('--accent', ac.main);
+  pv.style.setProperty('--accent-dim', ac.dim);
+  pv.style.setProperty('--accent-soft', ac.soft);
+  pv.style.background = 'linear-gradient(180deg,#FFFFFF 0%,' + ac.soft + ' 100%)';
+
   $('pTitle').textContent = it.title;
   $('pAlbum').textContent = it.album || '播客台';
   const bits = [];
@@ -483,12 +597,15 @@ function renderMini(){
   const it = current();
   if(!it){ $('mini').classList.remove('on'); return; }
   $('mini').classList.toggle('on', curView !== 'player');
+  const mc = albumColor(it.album);
+  $('mini').style.setProperty('--accent', mc.main);
   $('mTitle').textContent = it.title;
   $('mPlay').textContent = au.paused ? '▶' : '❚❚';
   if(miniFor !== it.id){
     miniFor = it.id;
     const cover = $('mCover');
     cover.style.background = coverBg(it.id);
+    cover.style.boxShadow = 'inset 0 0 0 2px ' + mc.dim;
     cover.innerHTML = '<span>' + esc((it.title || '播')[0]) + '</span>' +
       (it.cover ? '<img src="' + esc(it.cover) + '" alt="" referrerpolicy="no-referrer">' : '');
     const img = cover.querySelector('img');
@@ -537,17 +654,35 @@ window.addEventListener('popstate', (e) => {
 async function play(id){
   const it = byId(id);
   if(!it) return;
+  if(it.pending){ toast('这一集还没填链接'); return; }
 
-  if(!it.ok || !it.audio){
+  const saved = !!cacheIdx[it.id];
+
+  if((!it.ok || !it.audio) && !saved){
     toast('这一集没有音频地址，等清单刷新后再试');
     return;
   }
-  if(expired(it)){
+  if(expired(it) && !saved){
     toast('这一集的地址过期了。点右上角 ↻ 重新拉清单；还是不行就等 GitHub 每天自动刷新。');
     return;
   }
 
   if(id === curId && au.src){
+    // 已经缓存了但当前还挂在网络源上：换成本地文件，保留播放位置
+    if(cacheIdx[id] && !curFromCache){
+      const pos = au.currentTime || 0;
+      switching = true;
+      const src = await resolveSrc(it);
+      au.src = src;
+      au.playbackRate = rate;
+      au.addEventListener('loadedmetadata', () => {
+        if(pos > 1){ try{ au.currentTime = pos; }catch(e){} }
+        au.play().catch(() => {});
+      }, { once: true });
+      if(curView !== 'player') go('player');
+      return;
+    }
+
     if(au.paused) au.play().catch(() => toast('播放失败'));
     else au.pause();
     if(curView !== 'player') go('player');
@@ -560,7 +695,7 @@ async function play(id){
   qIndex = queue.findIndex(x => x.id === id);
 
   switching = true;
-  au.src = it.audio;
+  au.src = await resolveSrc(it);
   au.playbackRate = rate;
 
   renderAll();
@@ -571,18 +706,22 @@ async function play(id){
   catch(err){ console.warn('[play]', err); toast('点播放键开始'); }
 }
 
-function restoreLast(){
+async function restoreLast(){
   let id = null;
   try{ id = localStorage.getItem(LS_LAST); }catch(e){}
   if(!id || !byId(id)) id = items[0] && items[0].id;
   if(!id) return;
 
   const it = byId(id);
-  if(!it || !it.ok || expired(it)) return;
+  if(!it) return;
+
+  const saved = !!cacheIdx[it.id];
+  if((!it.ok || !it.audio) && !saved) return;
+  if(expired(it) && !saved) return;
 
   curId = id;
-  qIndex = queue.findIndex(x => x.id === id);
-  au.src = it.audio;
+  qIndex = queue.findIndex((x) => x.id === id);
+  au.src = await resolveSrc(it);
   au.playbackRate = rate;
   updateMedia();
   renderMini();
@@ -705,6 +844,9 @@ function closeSheet(v){
   const r = sheetResolve;
   sheetResolve = null;
   if(r) r(v);
+  const a = addResolve;
+  addResolve = null;
+  if(a) a(null);
 }
 
 /* ---------- 本地添加链接（只有 dev-server 才有） ---------- */
@@ -735,14 +877,26 @@ function openAddSheet(){
 
     const hint = document.createElement('div');
     hint.className = 'hint';
-    hint.textContent = '只在本地服务下可用。部署到 GitHub Pages 后，加新的一集要改 links.txt。';
+    hint.textContent = devOk
+      ? '本地服务模式：会把链接写进 links.txt 和 library.json。'
+      : '会提交到 ' + (GH ? GH.owner + '/' + GH.repo : 'GitHub') +
+        '，由 Actions 换地址，大约 1 分钟后能听。';
     s.appendChild(hint);
 
     const b = document.createElement('button');
     b.className = 'btn';
-    b.textContent = '换地址并添加';
+    b.textContent = '添加';
     b.addEventListener('click', () => closeAdd({ url: u.value.trim(), album: a.value.trim() }));
     s.appendChild(b);
+
+    if(!devOk && GH){
+      const d = document.createElement('div');
+      d.className = 'item2 cancel';
+      d.style.fontSize = '12px';
+      d.textContent = '当前连接 ' + GH.owner + '/' + GH.repo + ' · 断开';
+      d.addEventListener('click', () => closeAdd({ disconnect: true }));
+      s.appendChild(d);
+    }
 
     const c = document.createElement('div');
     c.className = 'item2 cancel';
@@ -773,8 +927,548 @@ async function detectDev(){
     const r = await fetch('./api/resolve', { cache: 'no-store' });
     if(!r.ok) return;
     const j = await r.json();
-    if(j && j.dev) $('btnAdd').hidden = false;
+    if(j && j.dev) devOk = true;
   }catch(e){}
+}
+
+/* ---------- 本地缓存：音频存手机，听过就不用再走流量 ---------- */
+const CACHE_KEY = 'podcast.v2.cache';
+const AUDIO_DB = 'podcast-audio';
+const AUDIO_STORE = 'audio';
+
+let cacheIdx = {};      // id -> { size, savedAt }
+const dlProgress = {};  // id -> { got, total }
+let dbP = null;
+
+function openDb(){
+  if(dbP) return dbP;
+  dbP = new Promise((res, rej) => {
+    let r;
+    try{ r = indexedDB.open(AUDIO_DB, 1); }catch(e){ rej(e); return; }
+    r.onupgradeneeded = () => {
+      const d = r.result;
+      if(!d.objectStoreNames.contains(AUDIO_STORE)) d.createObjectStore(AUDIO_STORE);
+    };
+    r.onsuccess = () => res(r.result);
+    r.onerror = () => rej(r.error);
+  });
+  return dbP;
+}
+
+function idbPut(key, val){
+  return openDb().then((d) => new Promise((res, rej) => {
+    const tx = d.transaction(AUDIO_STORE, 'readwrite');
+    tx.objectStore(AUDIO_STORE).put(val, key);
+    tx.oncomplete = () => res(true);
+    tx.onerror = () => rej(tx.error);
+  }));
+}
+function idbGet(key){
+  return openDb().then((d) => new Promise((res, rej) => {
+    const tx = d.transaction(AUDIO_STORE, 'readonly');
+    const rq = tx.objectStore(AUDIO_STORE).get(key);
+    rq.onsuccess = () => res(rq.result || null);
+    rq.onerror = () => rej(rq.error);
+  }));
+}
+function idbDel(key){
+  return openDb().then((d) => new Promise((res, rej) => {
+    const tx = d.transaction(AUDIO_STORE, 'readwrite');
+    tx.objectStore(AUDIO_STORE).delete(key);
+    tx.oncomplete = () => res(true);
+    tx.onerror = () => rej(tx.error);
+  }));
+}
+function idbClear(){
+  return openDb().then((d) => new Promise((res, rej) => {
+    const tx = d.transaction(AUDIO_STORE, 'readwrite');
+    tx.objectStore(AUDIO_STORE).clear();
+    tx.oncomplete = () => res(true);
+    tx.onerror = () => rej(tx.error);
+  }));
+}
+
+function loadCacheIdx(){
+  try{
+    const j = JSON.parse(localStorage.getItem(CACHE_KEY) || '{}');
+    if(j && typeof j === 'object'){
+      for(const k of Object.keys(j)){
+        if(j[k] && typeof j[k].size === 'number') cacheIdx[k] = j[k];
+      }
+    }
+  }catch(e){ cacheIdx = {}; }
+}
+function saveCacheIdx(){
+  try{ localStorage.setItem(CACHE_KEY, JSON.stringify(cacheIdx)); }catch(e){}
+}
+
+function fmtBytes(n){
+  n = n || 0;
+  if(n >= 1073741824) return (n / 1073741824).toFixed(1) + ' GB';
+  return (n / 1048576).toFixed(n > 10485760 ? 0 : 1) + ' MB';
+}
+
+function dlLabel(it){
+  if(it.pending) return '—';
+  if(cacheIdx[it.id]) return '✓';
+  const p = dlProgress[it.id];
+  if(p) return p.total ? Math.round(p.got / p.total * 100) + '%' : '…';
+  return '↓';
+}
+
+function refreshDl(id){
+  const btn = document.querySelector('.item[data-id="' + id + '"] .dl');
+  if(btn){
+    const it = byId(id);
+    btn.textContent = it ? dlLabel(it) : '↓';
+    btn.classList.toggle('on', !!cacheIdx[id]);
+  }
+  updateCacheInfo();
+}
+
+function cacheStats(){
+  const ids = Object.keys(cacheIdx);
+  let bytes = 0;
+  for(const id of ids) bytes += (cacheIdx[id] && cacheIdx[id].size) || 0;
+  return { n: ids.length, bytes };
+}
+
+function updateCacheInfo(){
+  const bar = $('cacheBar');
+  if(!bar) return;
+  const s = cacheStats();
+  bar.hidden = items.length === 0;
+  const info = $('cacheInfo');
+  const total = items.filter((x) => !x.pending).length;
+  if(info) info.textContent = '已存 ' + s.n + '/' + total + ' 集 · ' + fmtBytes(s.bytes);
+}
+
+async function downloadOne(it){
+  if(!it || !it.ok || !it.audio) throw new Error('没有音频地址');
+  if(cacheIdx[it.id]) return 0;
+  if(dlProgress[it.id]) throw new Error('正在下载中');
+  if(expired(it)) throw new Error('地址过期了，先刷新清单');
+
+  dlProgress[it.id] = { got: 0, total: 0 };
+  refreshDl(it.id);
+
+  try{
+    const res = await fetch(it.audio);
+    if(!res.ok) throw new Error('HTTP ' + res.status);
+
+    const total = +res.headers.get('content-length') || 0;
+    dlProgress[it.id].total = total;
+
+    const reader = res.body.getReader();
+    const chunks = [];
+    let got = 0;
+    while(true){
+      const step = await reader.read();
+      if(step.done) break;
+      chunks.push(step.value);
+      got += step.value.length;
+      dlProgress[it.id].got = got;
+      refreshDl(it.id);
+    }
+
+    const blob = new Blob(chunks, { type: res.headers.get('content-type') || 'audio/mpeg' });
+    await idbPut(it.id, blob);
+    cacheIdx[it.id] = { size: blob.size, savedAt: Date.now() };
+    saveCacheIdx();
+    return blob.size;
+  } finally {
+    delete dlProgress[it.id];
+    refreshDl(it.id);
+  }
+}
+
+async function toggleDownload(it){
+  if(it.pending){ toast('这一集还没填链接'); return; }
+  if(cacheIdx[it.id]) return deleteCached(it);
+  if(dlProgress[it.id]) return;
+
+  try{
+    if(navigator.storage && navigator.storage.persist) navigator.storage.persist().catch(() => {});
+    toast('开始缓存…');
+    const size = await downloadOne(it);
+    toast('已存到手机 · ' + fmtBytes(size));
+  }catch(err){
+    console.warn('[cache]', err);
+    toast('缓存失败：' + err.message);
+  }
+}
+
+async function deleteCached(it){
+  const s = cacheIdx[it.id];
+  const k = await openSheet('删除本地缓存？', [
+    { key: '__ok', label: '删除 ' + fmtBytes(s ? s.size : 0) }
+  ]);
+  if(k !== '__ok') return;
+  try{ await idbDel(it.id); }catch(e){}
+  delete cacheIdx[it.id];
+  saveCacheIdx();
+  refreshDl(it.id);
+  toast('已删除');
+}
+
+async function cacheAll(){
+  const todo = items.filter((x) => x.ok && x.audio && !cacheIdx[x.id] && !expired(x));
+  if(!todo.length){ toast('全部缓存好了'); return; }
+
+  let ok = 0, fail = 0;
+  for(let i = 0; i < todo.length; i++){
+    toast('缓存 ' + (i + 1) + '/' + todo.length + '…');
+    try{
+      await downloadOne(todo[i]);
+      ok++;
+    }catch(err){
+      fail++;
+      console.warn('[cache]', todo[i].title, err);
+    }
+    updateCacheInfo();
+  }
+  toast('完成：成功 ' + ok + (fail ? '，失败 ' + fail : ''));
+}
+
+async function clearAll(){
+  const s = cacheStats();
+  if(!s.n){ toast('还没有缓存'); return; }
+  const k = await openSheet('清空本地缓存？', [
+    { key: '__ok', label: '删除全部 ' + fmtBytes(s.bytes) }
+  ]);
+  if(k !== '__ok') return;
+  try{ await idbClear(); }catch(e){}
+  cacheIdx = {};
+  saveCacheIdx();
+  renderList();
+  toast('已清空');
+}
+
+async function resolveSrc(it){
+  if(cacheIdx[it.id]){
+    try{
+      const blob = await idbGet(it.id);
+      if(blob){
+        if(curUrl) URL.revokeObjectURL(curUrl);
+        curUrl = URL.createObjectURL(blob);
+        curFromCache = true;
+        return curUrl;
+      }
+    }catch(e){
+      console.warn('[cache] 读取失败，改走网络', e);
+    }
+  }
+  curFromCache = false;
+  return it.audio;
+}
+
+/* ---------- GitHub 模式（部署在 GitHub Pages 时，替你把链接提交进仓库） ---------- */
+const GH_KEY = 'podcast.v2.gh';
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+let GH = null;
+let devOk = false;
+
+function loadGH(){
+  try{
+    const j = JSON.parse(localStorage.getItem(GH_KEY) || 'null');
+    if(j && j.owner && j.repo && j.token) GH = j;
+  }catch(e){ GH = null; }
+}
+function saveGH(){
+  try{
+    if(GH) localStorage.setItem(GH_KEY, JSON.stringify(GH));
+    else localStorage.removeItem(GH_KEY);
+  }catch(e){}
+}
+
+function guessRepo(){
+  const host = location.hostname;
+  if(!/\.github\.io$/.test(host)) return null;
+  const owner = host.replace(/\.github\.io$/, '');
+  const first = location.pathname.split('/').filter(Boolean)[0];
+  return { owner, repo: first || owner + '.github.io' };
+}
+
+function tokenFromUrl(link){
+  try{
+    const u = new URL(link);
+    const m = u.pathname.match(/\/podcast\/([A-Za-z0-9_-]{6,})/);
+    if(m) return m[1];
+    const q = u.searchParams.get('token') || u.searchParams.get('share_token');
+    if(q && /^[A-Za-z0-9_-]{6,}$/.test(q)) return q;
+  }catch(e){}
+  return '';
+}
+
+function b64encode(str){
+  const bytes = new TextEncoder().encode(str);
+  let bin = '';
+  for(let i = 0; i < bytes.length; i++) bin += String.fromCharCode(bytes[i]);
+  return btoa(bin);
+}
+function b64decode(b64){
+  const bin = atob(String(b64 || '').replace(/\s+/g, ''));
+  const bytes = new Uint8Array(bin.length);
+  for(let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+  return new TextDecoder().decode(bytes);
+}
+
+async function ghApi(path, opts){
+  opts = opts || {};
+  const token = opts.token || (GH && GH.token) || '';
+  const res = await fetch('https://api.github.com' + path, {
+    method: opts.method || 'GET',
+    headers: Object.assign(
+      {
+        'Accept': 'application/vnd.github+json',
+        'Authorization': 'Bearer ' + token,
+        'X-GitHub-Api-Version': '2022-11-28'
+      },
+      opts.body ? { 'Content-Type': 'application/json' } : {}
+    ),
+    body: opts.body
+  });
+  let j = {};
+  try{ j = await res.json(); }catch(e){}
+  if(!res.ok){
+    const err = new Error(j.message || ('HTTP ' + res.status));
+    err.status = res.status;
+    throw err;
+  }
+  return j;
+}
+
+async function connectGh(token, g){
+  const info = await ghApi('/repos/' + g.owner + '/' + g.repo, { token });
+  if(info.permissions && info.permissions.push === false){
+    throw new Error('这个令牌没有写入权限');
+  }
+  GH = { owner: g.owner, repo: g.repo, branch: info.default_branch || 'main', token };
+  saveGH();
+  return GH;
+}
+
+async function ghAddLink(v, token){
+  const path = '/repos/' + GH.owner + '/' + GH.repo + '/contents/links.txt';
+  const cur = await ghApi(path + '?ref=' + encodeURIComponent(GH.branch));
+  const text = b64decode(cur.content);
+  if(text.indexOf(token) >= 0) throw new Error('这个链接已经在清单里了');
+
+  const line = (v.album ? v.album + ' | ' : '') + v.url;
+  const next = line + '\n' + text;
+
+  await ghApi(path, {
+    method: 'PUT',
+    body: JSON.stringify({
+      message: 'add: ' + (v.album || '播客') + ' · ' + token.slice(0, 8),
+      content: b64encode(next),
+      sha: cur.sha,
+      branch: GH.branch
+    })
+  });
+}
+
+function ghErr(err){
+  if(err.status === 401){ GH = null; saveGH(); toast('令牌无效或过期，重新连接一下'); }
+  else if(err.status === 403) toast('权限不够：令牌要给这个仓库 Contents 的 Read and write');
+  else if(err.status === 404) toast('找不到仓库或 links.txt');
+  else if(err.status === 409) toast('文件刚被改过，再点一次');
+  else toast('失败：' + err.message);
+}
+
+function waitForItem(id, onTick){
+  const started = Date.now();
+  return new Promise((resolve) => {
+    const tick = async () => {
+      await sleep(4000);
+      try{
+        const r = await fetch('./library.json?t=' + Date.now(), { cache: 'no-store' });
+        if(r.ok){
+          const j = await r.json();
+          if((j.items || []).some((x) => x.id === id)) return resolve(j);
+        }
+      }catch(e){}
+      const sec = Math.round((Date.now() - started) / 1000);
+      if(onTick) onTick(sec);
+      if(Date.now() - started > 180000) return resolve(null);
+      setTimeout(tick, 2000);
+    };
+    setTimeout(tick, 3000);
+  });
+}
+
+function openConnectSheet(g){
+  return new Promise((resolve) => {
+    addResolve = resolve;
+    const s = $('sheet');
+    s.innerHTML = '';
+
+    const h = document.createElement('h3');
+    h.textContent = '连接 ' + g.owner + '/' + g.repo;
+    s.appendChild(h);
+
+    const link = document.createElement('a');
+    link.className = 'linkbtn';
+    link.href = 'https://github.com/settings/personal-access-tokens/new';
+    link.target = '_blank';
+    link.rel = 'noopener';
+    link.textContent = '① 打开创建令牌页面 →';
+    s.appendChild(link);
+
+    const hint = document.createElement('div');
+    hint.className = 'hint';
+    hint.innerHTML =
+      '② Repository access 只勾 <b>' + esc(g.repo) + '</b><br>' +
+      '③ Permissions → Contents → <b>Read and write</b><br>' +
+      '④ 生成后复制 <code>github_pat_…</code>，粘到下面';
+    s.appendChild(hint);
+
+    const t = document.createElement('input');
+    t.type = 'password';
+    t.placeholder = 'github_pat_...';
+    t.setAttribute('autocapitalize', 'off');
+    t.setAttribute('autocorrect', 'off');
+    s.appendChild(t);
+
+    const b = document.createElement('button');
+    b.className = 'btn';
+    b.textContent = '连接';
+    b.addEventListener('click', () => closeAdd(t.value.trim()));
+    s.appendChild(b);
+
+    const c = document.createElement('div');
+    c.className = 'item2 cancel';
+    c.textContent = '取消';
+    c.addEventListener('click', () => closeAdd(null));
+    s.appendChild(c);
+
+    $('sheetBack').classList.add('on');
+    s.classList.add('on');
+    setTimeout(() => t.focus(), 80);
+  });
+}
+
+function explainMode(){
+  const isFile = location.protocol === 'file:';
+  const title = isFile ? '双击模式不能加链接' : '这个地址不能加链接';
+  const body = isFile
+    ? '浏览器不允许本地网页调豆包接口，也不允许网页写你的文件。\n\n' +
+      '想在本地贴链接：\n在终端运行 bun dev-server.mjs\n然后打开 http://localhost:8787'
+    : '这个地址没有本地服务，也不能直连豆包（跨域被拦）。\n\n' +
+      '想在本地贴链接：\n在终端运行 bun dev-server.mjs\n然后打开 http://localhost:8787\n\n' +
+      '想在线上贴链接：\n部署到 GitHub Pages 后，点 ＋ 连接令牌。';
+  openInfoSheet(title, body);
+}
+
+function openInfoSheet(title, body){
+  return new Promise((resolve) => {
+    addResolve = resolve;
+    const s = $('sheet');
+    s.innerHTML = '';
+
+    const h = document.createElement('h3');
+    h.textContent = title;
+    s.appendChild(h);
+
+    const p = document.createElement('div');
+    p.className = 'hint';
+    p.style.whiteSpace = 'pre-line';
+    p.style.fontSize = '13px';
+    p.style.color = 'var(--ink)';
+    p.textContent = body;
+    s.appendChild(p);
+
+    const u = document.createElement('div');
+    u.className = 'hint';
+    u.style.marginTop = '6px';
+    u.textContent = '当前地址：' + location.href;
+    s.appendChild(u);
+
+    const b = document.createElement('button');
+    b.className = 'btn';
+    b.textContent = '知道了';
+    b.addEventListener('click', () => closeAdd(null));
+    s.appendChild(b);
+
+    $('sheetBack').classList.add('on');
+    s.classList.add('on');
+  });
+}
+
+async function connectFlow(){
+  if(location.protocol === 'file:'){
+    explainMode();
+    return false;
+  }
+  const g = guessRepo();
+  if(!g){
+    explainMode();
+    return false;
+  }
+
+  const token = await openConnectSheet(g);
+  if(!token) return false;
+
+  toast('正在验证令牌…');
+  try{
+    await connectGh(token, g);
+    toast('已连接，再贴一次链接就行');
+    return true;
+  }catch(err){
+    if(err.status === 401) toast('令牌不对，检查有没有复制完整');
+    else toast('连接失败：' + err.message);
+    return false;
+  }
+}
+
+async function addLocal(){
+  const v = await openAddSheet();
+  if(!v || !v.url) return;
+
+  toast('正在换地址…');
+  try{
+    const res = await fetch('./api/resolve', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify(v)
+    });
+    if(res.status === 404 || res.status === 405){ toast('这个地址不支持直接添加，请改 links.txt'); return; }
+    const j = await res.json().catch(() => ({}));
+    if(!res.ok || j.error){ toast(j.error || ('添加失败 HTTP ' + res.status)); return; }
+    await loadLib(true);
+    toast('已添加');
+    if(j.item && j.item.id) play(j.item.id);
+  }catch(err){
+    toast('连不上本地服务：先运行 bun dev-server.mjs');
+  }
+}
+
+async function addRemote(){
+  const v = await openAddSheet();
+  if(!v) return;
+
+  if(v.disconnect){
+    const k = await openSheet('断开 GitHub？', [{ key: '__ok', label: '确认断开' }]);
+    if(k === '__ok'){ GH = null; saveGH(); toast('已断开'); }
+    return;
+  }
+  if(!v.url) return;
+
+  const token = tokenFromUrl(v.url);
+  if(!token){ toast('认不出这个链接，要豆包播客分享链接'); return; }
+
+  toast('正在提交到 GitHub…');
+  try{ await ghAddLink(v, token); }
+  catch(err){ ghErr(err); return; }
+
+  toast('已提交，等 Actions 换地址…');
+  const j = await waitForItem(token, (sec) => toast('Actions 运行中… ' + sec + ' 秒'));
+  if(!j){ toast('已提交，但 3 分钟没等到更新。点 ↻ 再试，或去 Actions 看看'); return; }
+
+  await loadLib(true);
+  toast('已添加');
+  play(token);
 }
 
 /* ---------- 事件 ---------- */
@@ -840,32 +1534,16 @@ au.addEventListener('error', () => {
 });
 
 $('btnRefresh').addEventListener('click', () => loadLib(true));
+$('btnCacheAll').addEventListener('click', cacheAll);
+$('btnCacheClear').addEventListener('click', clearAll);
 
 $('btnAdd').addEventListener('click', async () => {
-  const v = await openAddSheet();
-  if(!v || !v.url) return;
-  toast('正在换地址…');
-  try{
-    const res = await fetch('./api/resolve', {
-      method: 'POST',
-      headers: { 'content-type': 'application/json' },
-      body: JSON.stringify(v)
-    });
-    if(res.status === 404 || res.status === 405){
-      toast('这个地址不支持直接添加，请改 links.txt');
-      return;
-    }
-    const j = await res.json().catch(() => ({}));
-    if(!res.ok || j.error){
-      toast(j.error || ('添加失败 HTTP ' + res.status));
-      return;
-    }
-    await loadLib(true);
-    toast('已添加');
-    if(j.item && j.item.id) play(j.item.id);
-  }catch(err){
-    toast('连不上本地服务：先运行 bun dev-server.mjs');
+  if(devOk) return addLocal();
+  if(!GH){
+    const ok = await connectFlow();
+    if(!ok) return;
   }
+  return addRemote();
 });
 $('btnClose').addEventListener('click', back);
 $('btnMore').addEventListener('click', async () => {
@@ -934,6 +1612,8 @@ addEventListener('keydown', (e) => {
 
 /* ---------- 启动 ---------- */
 loadLocal();
+loadCacheIdx();
+loadGH();
 initMedia();
 try{ history.replaceState({ v: 'list' }, ''); }catch(e){}
 show('list');
@@ -950,8 +1630,16 @@ window.__podcast = {
   get lib(){ return LIB; },
   get items(){ return items; },
   get state(){ return { curId, rate, prog, qIndex, queueLen: queue.length }; },
+  get gh(){ return GH ? { owner: GH.owner, repo: GH.repo, branch: GH.branch, hasToken: !!GH.token } : null; },
+  get dev(){ return devOk; },
   reload: () => loadLib(true),
-  version: '1.0.0'
+  connectGh,
+  ghAddLink,
+  tokenFromUrl,
+  b64encode,
+  b64decode,
+  guessRepo,
+  version: '1.1.0'
 };
 
 })();

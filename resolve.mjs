@@ -57,14 +57,34 @@ export function readLinks(text) {
     const line = raw.trim();
     if (!line || line.startsWith('#')) continue;
 
+    // 支持三种写法：
+    //   链接
+    //   专辑名 | 链接
+    //   专辑名 | 标题 | 链接
+    // 链接留空（或写 -）表示占位：先占住编号，等拿到链接再补
+    const parts = line.split('|').map((s) => s.trim());
     let album = '';
-    let link = line;
+    let title = '';
+    let link = '';
 
-    // 支持「专辑名 | 链接」
-    const bar = line.lastIndexOf('|');
-    if (bar > 0) {
-      album = line.slice(0, bar).trim();
-      link = line.slice(bar + 1).trim();
+    if (parts.length >= 3) {
+      album = parts[0];
+      title = parts.slice(1, -1).join(' | ');
+      link = parts[parts.length - 1];
+    } else if (parts.length === 2) {
+      album = parts[0];
+      link = parts[1];
+    } else {
+      link = parts[0];
+    }
+
+    if (!link || link === '-' || link === '待补') {
+      if (!title) {
+        log(`  跳过（没有链接也没有标题）：${line.slice(0, 80)}`);
+        continue;
+      }
+      out.push({ token: '', album, title, link: '', pending: true });
+      continue;
     }
 
     const token = getToken(link);
@@ -75,7 +95,7 @@ export function readLinks(text) {
     if (seen.has(token)) continue;
     seen.add(token);
 
-    out.push({ token, album, link });
+    out.push({ token, album, title, link });
   }
   return out;
 }
@@ -179,9 +199,42 @@ async function main() {
   let failed = 0;
 
   for (const l of links) {
+    if (l.pending) {
+      items.push({
+        id: 'pending:' + (l.title || l.album),
+        title: l.title,
+        album: l.album || '未分组',
+        duration: 0,
+        audio: '',
+        cover: '',
+        expires: 0,
+        ok: false,
+        pending: true,
+        link: ''
+      });
+      log(`  … ${l.title}（待补链接）`);
+      continue;
+    }
+
     const label = `${l.token.slice(0, 8)}…`;
+
+    // 还有 3 天以上有效期就沿用旧地址，免得每天换签名让浏览器缓存全部作废
+    const prev = old.get(l.token);
+    if (prev && prev.ok && prev.audio && prev.expires * 1000 - Date.now() > 3 * 86400000) {
+      const days = ((prev.expires * 1000 - Date.now()) / 86400000).toFixed(1);
+      items.push({
+        ...prev,
+        title: l.title || prev.title,
+        album: l.album || prev.album || '未分组',
+        link: l.link
+      });
+      log(`  = ${label} ${l.title || prev.title} · 沿用旧地址（还有 ${days} 天）`);
+      continue;
+    }
+
     try {
       const ep = await fetchEpisode(l.token);
+      if (l.title) ep.title = l.title;
       items.push({
         ...ep,
         album: l.album || '未分组',
@@ -193,7 +246,12 @@ async function main() {
       failed++;
       const prev = old.get(l.token);
       if (prev && prev.expires * 1000 > Date.now()) {
-        items.push({ ...prev, album: l.album || prev.album || '未分组', link: l.link });
+        items.push({
+          ...prev,
+          title: l.title || prev.title,
+          album: l.album || prev.album || '未分组',
+          link: l.link
+        });
         log(`  ! ${label} 刷新失败（${err.message}），沿用上一次的地址`);
       } else {
         items.push({

@@ -1,8 +1,41 @@
 # 一行一个豆包播客链接。
-# 想分组就写成：专辑名 | 链接
-# 新的写在上面，列表从上往下显示。
-#
-# 下面这行是示例，换成你自己的就行：
-# 读书拆解 | https://www.doubao.com/podcast/example0000
+# 写法：专辑名 | 标题 | 链接   （标题和专辑名都可以省略）
+# 链接留空或写 - ：占位，先占住编号，等拿到链接再补。
+# 列表按这里的顺序显示，专辑按第一次出现的顺序排列。
 
-读书拆解 | https://www.doubao.com/podcast/83f66d715ed1
+# ---------- 普通心理学（淡蓝） ----------
+普通心理学 | 01 听觉单位系统的层次框架 | https://www.doubao.com/podcast/b923f684efea
+普通心理学 | 02 特征分析理论的经典实验 | https://www.doubao.com/podcast/d20519a2475a
+普通心理学 | 03 特征整合理论：特征如何整合与绑定 | https://www.doubao.com/podcast/637f15a4d93a
+普通心理学 | 04 模式识别理论：高频考点与结合方向 | https://www.doubao.com/podcast/e40b7300d0b4
+普通心理学 | 05 梳理注意的认知理论 | https://www.doubao.com/podcast/22f489a0b9fb
+普通心理学 | 06 推理中常见的系统性偏差 | https://www.doubao.com/podcast/8606a26d4515
+普通心理学 | 07 梳理「影响问题解决的因素」 | https://www.doubao.com/podcast/260b897f1d11
+普通心理学 | 08 动机理论的四大关键理论解析 | https://www.doubao.com/podcast/f18395e7272e
+普通心理学 | 09 动机理论的「新」发展梳理 | https://www.doubao.com/podcast/0d0a61338b9a
+普通心理学 | 10 新兴动机理论与游戏化学习（拓展） | https://www.doubao.com/podcast/e0d8237a0555
+普通心理学 | 11 情绪理论：从生理到认知的演进（一） | https://www.doubao.com/podcast/a569531cb256
+普通心理学 | 12 情绪理论：从生理到认知的演进（二） | https://www.doubao.com/podcast/0602f5c54dbc
+普通心理学 | 13 智力的主要理论梳理 | https://www.doubao.com/podcast/56809e2647e6
+普通心理学 | 14 经典条件与操作条件全面对比 | https://www.doubao.com/podcast/ac4376ef7c34
+
+# ---------- 发展心理学（橙） ----------
+发展心理学 | 01 皮亚杰与维果茨基理论比较 | https://www.doubao.com/podcast/6e1d149dfb96
+
+# ---------- 教育心理学（橙） ----------
+教育心理学 | 01 学习策略的分类及相互关系 | https://www.doubao.com/podcast/beb8a043efcf
+教育心理学 | 02 布鲁姆与加涅教学目标对比 | https://www.doubao.com/podcast/36349158bbab
+
+# ---------- 心理统计与测量（浅粉） ----------
+心理统计与测量 | 01 信度与五种误差 | https://www.doubao.com/podcast/d5d3c6a1b30c
+心理统计与测量 | 02 复本信度 | https://www.doubao.com/podcast/6fe64e8d9239
+心理统计与测量 | 03 α 系数（同质性信度） | https://www.doubao.com/podcast/4c954283d8a6
+心理统计与测量 | 04 效度与信度的关系及记忆口诀 | https://www.doubao.com/podcast/bf63a60303a4
+心理统计与测量 | 05 常模 | https://www.doubao.com/podcast/f21458d8cc4e
+心理统计与测量 | 06 标准误及其用途 | https://www.doubao.com/podcast/522d500a714e
+心理统计与测量 | 07 假设检验：从框架到考点 | https://www.doubao.com/podcast/0b9c9aa9d7e7
+心理统计与测量 | 08 σ 与 S 在 t 检验中的应用 | https://www.doubao.com/podcast/83f66d715ed1
+心理统计与测量 | 09 三种 t 检验 | https://www.doubao.com/podcast/5f36bcd15e83
+心理统计与测量 | 10 不同样本的 t 检验怎么用 | https://www.doubao.com/podcast/e211dafab371
+心理统计与测量 | 11 理解决定系数的含义 | https://www.doubao.com/podcast/00a4d78cf5b6
+心理统计与测量 | 12 心理统计与测量重点梳理 | https://www.doubao.com/podcast/745e64aad117
