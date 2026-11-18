@@ -1,53 +1,59 @@
 播客台 · 节目清单
-导出时间：2026/11/18 14:14:36
-共 38 集（可听 37 集），可听时长 449 分 2 秒
+导出时间：2026/11/18 15:14:03
+共 40 集（可听 39 集），可听时长 505 分 30 秒
 音频地址约 7 天过期，由工具自动续期；本清单只记录标题和分享链接。
 
-【普通心理学】 15 集 · 176 分钟
+【普通心理学】 17 集 · 201 分钟
 
-01  听觉单位系统的层次框架
+01  普通心理学：打通底层线
+    24:57    https://www.doubao.com/podcast/01bc4276dbdd
+
+02  《普通心理学：感觉与知觉》
+    还在生成中，稍后再试    https://www.doubao.com/podcast/08e8d5526564
+
+03  听觉单位系统的层次框架
     11:56    https://www.doubao.com/podcast/b923f684efea
 
-02  特征分析理论的经典实验
+04  特征分析理论的经典实验
     10:06    https://www.doubao.com/podcast/d20519a2475a
 
-03  特征整合理论：特征如何整合与绑定
+05  特征整合理论：特征如何整合与绑定
     9:09    https://www.doubao.com/podcast/637f15a4d93a
 
-04  模式识别理论：高频考点与结合方向
+06  模式识别理论：高频考点与结合方向
     11:18    https://www.doubao.com/podcast/e40b7300d0b4
 
-05  梳理注意的认知理论
+07  梳理注意的认知理论
     8:59    https://www.doubao.com/podcast/22f489a0b9fb
 
-06  推理中常见的系统性偏差
+08  推理中常见的系统性偏差
     17:32    https://www.doubao.com/podcast/8606a26d4515
 
-07  梳理「影响问题解决的因素」
+09  梳理「影响问题解决的因素」
     9:25    https://www.doubao.com/podcast/260b897f1d11
 
-08  动机理论的四大关键理论解析
+10  动机理论的四大关键理论解析
     16:38    https://www.doubao.com/podcast/f18395e7272e
 
-09  动机理论的「新」发展梳理
+11  动机理论的「新」发展梳理
     11:05    https://www.doubao.com/podcast/0d0a61338b9a
 
-10  新兴动机理论与游戏化学习（拓展）
+12  新兴动机理论与游戏化学习（拓展）
     6:56    https://www.doubao.com/podcast/e0d8237a0555
 
-11  情绪理论：从生理到认知的演进（一）
+13  情绪理论：从生理到认知的演进（一）
     15:21    https://www.doubao.com/podcast/a569531cb256
 
-12  情绪理论：从生理到认知的演进（二）
+14  情绪理论：从生理到认知的演进（二）
     15:40    https://www.doubao.com/podcast/0602f5c54dbc
 
-13  智力的主要理论梳理
+15  智力的主要理论梳理
     10:43    https://www.doubao.com/podcast/56809e2647e6
 
-14  经典条件与操作条件全面对比
+16  经典条件与操作条件全面对比
     9:49    https://www.doubao.com/podcast/ac4376ef7c34
 
-15  社会心理学 8 大块记忆卡
+17  社会心理学 8 大块记忆卡
     11:06    https://www.doubao.com/podcast/fcfc8ae210b3
 
 【发展心理学】 3 集 · 63 分钟
@@ -119,10 +125,10 @@
 13  心理统计与测量重点梳理
     4:45    https://www.doubao.com/podcast/745e64aad117
 
-【政治101】 2 集 · 12 分钟
+【政治101】 2 集 · 43 分钟
 
-01  马原
-    分享链接已失效（豆包生成失败或分享过期）    https://www.doubao.com/podcast/a314ebcf6a89
+01  马克思主义哲学基本内容
+    31:31    https://www.doubao.com/podcast/0a99b4e192a6
 
 02  思修法基的主要内容
     11:40    https://www.doubao.com/podcast/82f37d30f7d3

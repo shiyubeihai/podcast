@@ -1,12 +1,35 @@
 {
   "schema": 1,
-  "updatedAt": "2026-11-18T06:14:36.038Z",
-  "count": 38,
+  "updatedAt": "2026-11-18T07:12:42.952Z",
+  "count": 40,
   "failed": 1,
   "items": [
     {
+      "id": "01bc4276dbdd",
+      "title": "01 普通心理学：打通底层线",
+      "duration": 1497,
+      "audio": "https://p6-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/864ee47baacf41f189bc7b658be4793a?lk3s=8e244e95&rcl=2026111815015886E58AB97B759A6575E4&rrcfp=b2eaac72&x-expires=1795590739&x-signature=UfzCNCBzHQmRJlbfr5xkeSVneWo%3D",
+      "cover": "https://p26-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/7260a9bacda647138480d90a95f0a740~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=2026111815015886E58AB97B759A6575E4&rrcfp=64220c93&x-expires=1795590130&x-signature=nMB6G0lRof98wbkXd7p2L8V%2FZCg%3D",
+      "expires": 1795590739,
+      "ok": true,
+      "album": "普通心理学",
+      "link": "https://www.doubao.com/podcast/01bc4276dbdd"
+    },
+    {
+      "id": "08e8d5526564",
+      "title": "02 《普通心理学：感觉与知觉》",
+      "album": "普通心理学",
+      "duration": 0,
+      "audio": "",
+      "cover": "",
+      "expires": 0,
+      "ok": false,
+      "error": "还在生成中，稍后再试",
+      "link": "https://www.doubao.com/podcast/08e8d5526564"
+    },
+    {
       "id": "b923f684efea",
-      "title": "01 听觉单位系统的层次框架",
+      "title": "03 听觉单位系统的层次框架",
       "duration": 716,
       "audio": "https://p3-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/e32b138e3a4d4670b0931bf2adf314a9?lk3s=8e244e95&rcl=20261115112422C74B1127AC8307BEFA9A&rrcfp=b2eaac72&x-expires=1795318152&x-signature=HebLxlZXvOwQepRPlng5jgSymgE%3D",
       "cover": "https://p26-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/666110ce510b4ec7a55bd441bceaf8f0~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=20261115112422C74B1127AC8307BEFA9A&rrcfp=64220c93&x-expires=1795317875&x-signature=Mzgp7qmME2l5SoquXG9B0dxbRNI%3D",
@@ -17,7 +40,7 @@
     },
     {
       "id": "d20519a2475a",
-      "title": "02 特征分析理论的经典实验",
+      "title": "04 特征分析理论的经典实验",
       "duration": 606,
       "audio": "https://p9-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/f4d44ec9e24a495d8dd9016d702c769f?lk3s=8e244e95&rcl=20261115112441F0891D6BC40A7BBEC739&rrcfp=b2eaac72&x-expires=1795318131&x-signature=kwy0bU6n1aEnGPXsridlzGmyYp0%3D",
       "cover": "https://p6-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/2c0f57a874ca4461b23b61a4f3ca27b0~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=20261115112441F0891D6BC40A7BBEC739&rrcfp=64220c93&x-expires=1795317896&x-signature=Z9uXXPHpHtHRoircT8fr5UbeLmM%3D",
@@ -28,7 +51,7 @@
     },
     {
       "id": "637f15a4d93a",
-      "title": "03 特征整合理论：特征如何整合与绑定",
+      "title": "05 特征整合理论：特征如何整合与绑定",
       "duration": 549,
       "audio": "https://p9-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/f14b33e48cfd4517a28e970d886b6525?lk3s=8e244e95&rcl=20261115110412D08C1E36D17951BCAB11&rrcfp=b2eaac72&x-expires=1795316885&x-signature=PQgUx8gxhCOP9Slxjas9dmevkcQ%3D",
       "cover": "https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/9c925c825e7d4f3499eb8cfcd07ae84e~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=20261115110412D08C1E36D17951BCAB11&rrcfp=64220c93&x-expires=1795316666&x-signature=Vgq6aQPNZ0PyrCpyKJdesZC5RVg%3D",
@@ -39,7 +62,7 @@
     },
     {
       "id": "e40b7300d0b4",
-      "title": "04 模式识别理论：高频考点与结合方向",
+      "title": "06 模式识别理论：高频考点与结合方向",
       "duration": 678,
       "audio": "https://p3-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/5ce2e7154e4f468190093df98ac77314?lk3s=8e244e95&rcl=202611151122467BD0BFA31DC09CBE868D&rrcfp=b2eaac72&x-expires=1795318040&x-signature=i78W0OLQnPANxIXLVA0HZXTmsQ0%3D",
       "cover": "https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/17f09ce426ee46ba9f10e6b6c38a2600~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=202611151122467BD0BFA31DC09CBE868D&rrcfp=64220c93&x-expires=1795317778&x-signature=Hbe5P7VXiEMJxwsnjjWIWI%2FxIiI%3D",
@@ -50,7 +73,7 @@
     },
     {
       "id": "22f489a0b9fb",
-      "title": "05 梳理注意的认知理论",
+      "title": "07 梳理注意的认知理论",
       "duration": 539,
       "audio": "https://p26-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/35ea3d876b744b9084609d7f0ddebf9d?lk3s=8e244e95&rcl=2026111514102244E4626DA743F4D1566A&rrcfp=b2eaac72&x-expires=1795328050&x-signature=Ji5fpj6EwC8av%2Fxxqmv2v96TNkQ%3D",
       "cover": "https://p26-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/66c5f0a0da734ac1956eb579eb037e88~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=2026111514102244E4626DA743F4D1566A&rrcfp=64220c93&x-expires=1795327832&x-signature=iDy8SQeT4mYVBzz8MTnoAWHAZQc%3D",
@@ -61,7 +84,7 @@
     },
     {
       "id": "8606a26d4515",
-      "title": "06 推理中常见的系统性偏差",
+      "title": "08 推理中常见的系统性偏差",
       "duration": 1052,
       "audio": "https://p9-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/9c2e5577364b42738b64b886d4c79d3b?lk3s=8e244e95&rcl=2026111511143656C03F43BE19D3BD7E9B&rrcfp=b2eaac72&x-expires=1795317714&x-signature=Vxg%2FS2zZ1AdP%2BZC%2Bth2AZ9%2F4wEk%3D",
       "cover": "https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/d5ffc15cdc8049169c47621d1b82a81b~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=2026111511143656C03F43BE19D3BD7E9B&rrcfp=64220c93&x-expires=1795317291&x-signature=mp96P7J7SFiqtcL1iPrPB4MLN7g%3D",
@@ -72,7 +95,7 @@
     },
     {
       "id": "260b897f1d11",
-      "title": "07 梳理「影响问题解决的因素」",
+      "title": "09 梳理「影响问题解决的因素」",
       "duration": 565,
       "audio": "https://p6-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/cb7cfdede5284f2d8c6e4e0b1c6768ce?lk3s=8e244e95&rcl=202611151123107CE307BDD19A27BD1A9C&rrcfp=b2eaac72&x-expires=1795318017&x-signature=n7573DwN5CxWlQOnXE8tGBbbB1E%3D",
       "cover": "https://p26-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/34e8ead56f094169bf62b4c497d5a046~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=202611151123107CE307BDD19A27BD1A9C&rrcfp=64220c93&x-expires=1795317803&x-signature=Ibrg9EMqnbcyfT1ex4IkoHlgd30%3D",
@@ -83,7 +106,7 @@
     },
     {
       "id": "f18395e7272e",
-      "title": "08 动机理论的四大关键理论解析",
+      "title": "10 动机理论的四大关键理论解析",
       "duration": 998,
       "audio": "https://p3-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/674107d0bb2f476095a077e3d94e506f?lk3s=8e244e95&rcl=20261115110748B40D04F2613765B97A9F&rrcfp=b2eaac72&x-expires=1795317280&x-signature=Sq5X7RDV1a13MsXp0T27p6X9uDU%3D",
       "cover": "https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/945f5de757e049eda0eeb9fcfaeac081~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=20261115110748B40D04F2613765B97A9F&rrcfp=64220c93&x-expires=1795316882&x-signature=9uiOj1MkIyauYzd4SY4ZQkMjodk%3D",
@@ -94,7 +117,7 @@
     },
     {
       "id": "0d0a61338b9a",
-      "title": "09 动机理论的「新」发展梳理",
+      "title": "11 动机理论的「新」发展梳理",
       "duration": 665,
       "audio": "https://p6-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/59297b02bf8b47d3a155898286a68251?lk3s=8e244e95&rcl=2026111511032780B66C23B4F6F2B6FD5D&rrcfp=b2eaac72&x-expires=1795316874&x-signature=GxpZWdqN9XT9M%2Bv5q%2F%2BEkXViGqU%3D",
       "cover": "https://p11-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/5662c130d567448b8e371095d9996ec0~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=2026111511032780B66C23B4F6F2B6FD5D&rrcfp=64220c93&x-expires=1795316621&x-signature=7kODIPV7w%2FYyR%2F5fewv9R3GzQwk%3D",
@@ -105,7 +128,7 @@
     },
     {
       "id": "e0d8237a0555",
-      "title": "10 新兴动机理论与游戏化学习（拓展）",
+      "title": "12 新兴动机理论与游戏化学习（拓展）",
       "duration": 416,
       "audio": "https://p3-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/0391407b8ca340b58e6dd756c6b8a9ed?lk3s=8e244e95&rcl=20261115105848E2EA6A972CDD0DBC62B6&rrcfp=b2eaac72&x-expires=1795316501&x-signature=M2y3dcweNgefsDA4Bj6sTYDSCI0%3D",
       "cover": "https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/c381149cf6794ea29c9110819fc3030e~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=20261115105848E2EA6A972CDD0DBC62B6&rrcfp=64220c93&x-expires=1795316338&x-signature=X48TmZ2Uy3EyFN6eZ7r45o4oVN8%3D",
@@ -116,7 +139,7 @@
     },
     {
       "id": "a569531cb256",
-      "title": "11 情绪理论：从生理到认知的演进（一）",
+      "title": "13 情绪理论：从生理到认知的演进（一）",
       "duration": 921,
       "audio": "https://p3-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/da1baef3f790466faad24ca3ac28693b?lk3s=8e244e95&rcl=202611151058339C30ED75C696A8BA3075&rrcfp=b2eaac72&x-expires=1795316675&x-signature=RgiWifRIRDToJsBSZxJxOmlx%2BLQ%3D",
       "cover": "https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/1ac1fa1bed95431d83ad01000aaaa743~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=202611151058339C30ED75C696A8BA3075&rrcfp=64220c93&x-expires=1795316324&x-signature=jetomP6GgQSgre1M6AEtWFk3sDs%3D",
@@ -127,7 +150,7 @@
     },
     {
       "id": "0602f5c54dbc",
-      "title": "12 情绪理论：从生理到认知的演进（二）",
+      "title": "14 情绪理论：从生理到认知的演进（二）",
       "duration": 940,
       "audio": "https://p9-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/b7ebd79ccb6c4582b9eae3f369643e3d?lk3s=8e244e95&rcl=20261115105922F90034BC8B300BBA454E&rrcfp=b2eaac72&x-expires=1795316743&x-signature=A2RSqD5nJL3H4p469fVmqaSDO5k%3D",
       "cover": "https://p26-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/7741ad0c47fd4149a2bc8ed08d02b35a~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=20261115105922F90034BC8B300BBA454E&rrcfp=64220c93&x-expires=1795316375&x-signature=P4kyzcQKQSxFlCWZOOthIMJ9VQQ%3D",
@@ -138,7 +161,7 @@
     },
     {
       "id": "56809e2647e6",
-      "title": "13 智力的主要理论梳理",
+      "title": "15 智力的主要理论梳理",
       "duration": 643,
       "audio": "https://p3-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/2847b2f6ca984fb086f749c2056c8a2f?lk3s=8e244e95&rcl=2026111510575177201E56F20F4BBB2E9B&rrcfp=b2eaac72&x-expires=1795316537&x-signature=OD%2FeZGocwFDOmc0h9Yvuebwi5iY%3D",
       "cover": "https://p26-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/4444c48b9ebe44c7a5888a13b145dd6d~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=2026111510575177201E56F20F4BBB2E9B&rrcfp=64220c93&x-expires=1795316283&x-signature=2aQFs9vaq6np4KJwKdHW%2BVjKqpU%3D",
@@ -149,7 +172,7 @@
     },
     {
       "id": "ac4376ef7c34",
-      "title": "14 经典条件与操作条件全面对比",
+      "title": "16 经典条件与操作条件全面对比",
       "duration": 589,
       "audio": "https://p26-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/721de9fba33f472dbaa58de84a2b4012?lk3s=8e244e95&rcl=20261115151412113D3DF162F9E9D69E13&rrcfp=b2eaac72&x-expires=1795331890&x-signature=yUNGe9FEpzO%2FthV0orl6qBSsVdE%3D",
       "cover": "https://p26-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/96c4cd51925640a0969e5992e257e552~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=20261115151412113D3DF162F9E9D69E13&rrcfp=64220c93&x-expires=1795331668&x-signature=kaD6NSbDt51zsdPs54Pbwx74Il0%3D",
@@ -160,7 +183,7 @@
     },
     {
       "id": "fcfc8ae210b3",
-      "title": "15 社会心理学 8 大块记忆卡",
+      "title": "17 社会心理学 8 大块记忆卡",
       "duration": 666,
       "audio": "https://p3-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/030d1984a30c483d93d954f2c78b41ea?lk3s=8e244e95&rcl=202611181306423DF57D822355E75515DF&rrcfp=b2eaac72&x-expires=1795583477&x-signature=CXTc6zcWhOb0Mst4fn80fiNWkEA%3D",
       "cover": "https://p11-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/c9e64e6d94cc4a06828ed49120042c24~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=202611181306423DF57D822355E75515DF&rrcfp=64220c93&x-expires=1795583216&x-signature=589Ac2nyYLgB7k8DUjjzXd3LH6k%3D",
@@ -401,16 +424,15 @@
       "link": "https://www.doubao.com/podcast/745e64aad117"
     },
     {
-      "id": "a314ebcf6a89",
-      "title": "01 马原",
+      "id": "0a99b4e192a6",
+      "title": "01 马克思主义哲学基本内容",
+      "duration": 1891,
+      "audio": "https://p9-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/b98398558a2444c192c1ce7e289b8a65?lk3s=8e244e95&rcl=20261118142726DADBEC6648472C61B3A1&rrcfp=b2eaac72&x-expires=1795588871&x-signature=sIL%2F%2Bsa1tvfLloOfv5XdKWwGGa4%3D",
+      "cover": "https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/bc5f845bf71f4428a500417634edba93~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=20261118142726DADBEC6648472C61B3A1&rrcfp=64220c93&x-expires=1795588060&x-signature=i9CJSOXOQ2RIADVO%2FPhlP882Vi8%3D",
+      "expires": 1795588871,
+      "ok": true,
       "album": "政治101",
-      "duration": 0,
-      "audio": "",
-      "cover": "",
-      "expires": 0,
-      "ok": false,
-      "error": "分享链接已失效（豆包生成失败或分享过期）",
-      "link": "https://www.doubao.com/podcast/a314ebcf6a89"
+      "link": "https://www.doubao.com/podcast/0a99b4e192a6"
     },
     {
       "id": "82f37d30f7d3",
