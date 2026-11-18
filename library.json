@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "updatedAt": "2026-11-16T05:26:51.041Z",
-  "count": 29,
-  "failed": 0,
+  "updatedAt": "2026-11-18T06:14:36.038Z",
+  "count": 38,
+  "failed": 1,
   "items": [
     {
       "id": "b923f684efea",
@@ -159,8 +159,30 @@
       "link": "https://www.doubao.com/podcast/ac4376ef7c34"
     },
     {
+      "id": "fcfc8ae210b3",
+      "title": "15 社会心理学 8 大块记忆卡",
+      "duration": 666,
+      "audio": "https://p3-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/030d1984a30c483d93d954f2c78b41ea?lk3s=8e244e95&rcl=202611181306423DF57D822355E75515DF&rrcfp=b2eaac72&x-expires=1795583477&x-signature=CXTc6zcWhOb0Mst4fn80fiNWkEA%3D",
+      "cover": "https://p11-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/c9e64e6d94cc4a06828ed49120042c24~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=202611181306423DF57D822355E75515DF&rrcfp=64220c93&x-expires=1795583216&x-signature=589Ac2nyYLgB7k8DUjjzXd3LH6k%3D",
+      "expires": 1795583477,
+      "ok": true,
+      "album": "普通心理学",
+      "link": "https://www.doubao.com/podcast/fcfc8ae210b3"
+    },
+    {
+      "id": "169d716df103",
+      "title": "01 发展心理学阶段领域纵向总表",
+      "duration": 744,
+      "audio": "https://p6-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/ca8d32f6ba474471b747f9c98b35bef4?lk3s=8e244e95&rcl=202611181330285E100601EDE72359E8AD&rrcfp=b2eaac72&x-expires=1795584925&x-signature=uyzoseyfrnmso%2B0z2QXlgU%2B2Z0Q%3D",
+      "cover": "https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/6d0b9181092b40ae826f9dde13d9920d~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=202611181330285E100601EDE72359E8AD&rrcfp=64220c93&x-expires=1795584643&x-signature=kN56oiwbkfympzc0UWwjYRbK3pc%3D",
+      "expires": 1795584925,
+      "ok": true,
+      "album": "发展心理学",
+      "link": "https://www.doubao.com/podcast/169d716df103"
+    },
+    {
       "id": "6e1d149dfb96",
-      "title": "01 皮亚杰与维果茨基理论比较",
+      "title": "02 皮亚杰与维果茨基理论比较",
       "duration": 857,
       "audio": "https://p3-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/5dcbf45474ad435bbd50268843bd6224?lk3s=8e244e95&rcl=2026111514065403D440F248599CCCBD95&rrcfp=b2eaac72&x-expires=1795327967&x-signature=EBuO1DK8rzaYBBcwzqg%2FNWRsSO8%3D",
       "cover": "https://p26-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/bcccef07a09a42ffa499faa0290bb871~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=2026111514065403D440F248599CCCBD95&rrcfp=64220c93&x-expires=1795327627&x-signature=ZkRr%2BHqG9O2Mdc2Qgr51YlgRPMw%3D",
@@ -170,8 +192,30 @@
       "link": "https://www.doubao.com/podcast/6e1d149dfb96"
     },
     {
+      "id": "9ebf1626e816",
+      "title": "03 发展心理学核心要点背诵版",
+      "duration": 2166,
+      "audio": "https://p3-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/55d7208949174ed3ba244e8eebd9c7e2?lk3s=8e244e95&rcl=20261118130420E949E8381FC0CB5A40A3&rrcfp=b2eaac72&x-expires=1795583909&x-signature=DBDWC6H8keWrVRK5NMY9TByDZPM%3D",
+      "cover": "https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/efaa940184d04e4c842ac2739b756f0d~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=20261118130420E949E8381FC0CB5A40A3&rrcfp=64220c93&x-expires=1795583071&x-signature=ftfVOT4b%2BDEgWd07XSLWrA2aTiA%3D",
+      "expires": 1795583909,
+      "ok": true,
+      "album": "发展心理学",
+      "link": "https://www.doubao.com/podcast/9ebf1626e816"
+    },
+    {
+      "id": "74dc3051a343",
+      "title": "01 教育心理学：理论与启示速查",
+      "duration": 809,
+      "audio": "https://p3-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/ef315fefe09f4ab3aa900be62ae427a9?lk3s=8e244e95&rcl=202611181305145D49BFBEEC49FD6521FF&rrcfp=b2eaac72&x-expires=1795583429&x-signature=suvQSjOaNtbfW%2BXyA9A2ncjv2DA%3D",
+      "cover": "https://p26-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/ce48a5280fae4aa4a60a1eb6c5fcc60e~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=202611181305145D49BFBEEC49FD6521FF&rrcfp=64220c93&x-expires=1795583126&x-signature=Aa7w%2BQ7VVBaPmCIQk6PkJUjFt2o%3D",
+      "expires": 1795583429,
+      "ok": true,
+      "album": "教育心理学",
+      "link": "https://www.doubao.com/podcast/74dc3051a343"
+    },
+    {
       "id": "beb8a043efcf",
-      "title": "01 学习策略的分类及相互关系",
+      "title": "02 学习策略的分类及相互关系",
       "duration": 439,
       "audio": "https://p3-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/a2db70908068461a8218ff3f069ab91d?lk3s=8e244e95&rcl=20261115142757DBAC42F39433F7D841D4&rrcfp=b2eaac72&x-expires=1795329057&x-signature=6q8ANSNBIFKUV3RuuJpc%2B7KNY90%3D",
       "cover": "https://p11-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/0a4e3c788a984151a4abc497b404996f~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=20261115142757DBAC42F39433F7D841D4&rrcfp=64220c93&x-expires=1795328888&x-signature=mEftFynS%2BrtkCWQFpAGgHcYs4Vk%3D",
@@ -182,7 +226,7 @@
     },
     {
       "id": "36349158bbab",
-      "title": "02 布鲁姆与加涅教学目标对比",
+      "title": "03 布鲁姆与加涅教学目标对比",
       "duration": 606,
       "audio": "https://p3-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/38840927551540d68fa4b05e38a2089f?lk3s=8e244e95&rcl=20261115145126E5A5EEA0943F18D6D6E5&rrcfp=b2eaac72&x-expires=1795330526&x-signature=H%2FYT8AjBViAVuTufjItc6gl3i1o%3D",
       "cover": "https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/aac9f7b12c0a46c098e7bf05a1356b73~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=20261115145126E5A5EEA0943F18D6D6E5&rrcfp=64220c93&x-expires=1795330297&x-signature=BnYxKMauY%2B35PYRWkWwdqFRw%2Ffg%3D",
@@ -190,6 +234,28 @@
       "ok": true,
       "album": "教育心理学",
       "link": "https://www.doubao.com/podcast/36349158bbab"
+    },
+    {
+      "id": "d92b869a5855",
+      "title": "04 教育心理学核心要点背诵版",
+      "duration": 1160,
+      "audio": "https://p3-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/ecbff33d44ca46b79375d0d10b300ebd?lk3s=8e244e95&rcl=202611181303058EBA88B222BBE060A95E&rrcfp=b2eaac72&x-expires=1795583466&x-signature=1MCvBipCVNG0UboygonztDYM3gA%3D",
+      "cover": "https://p11-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/dfacb1f67f954c43ad44af75a4218593~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=202611181303058EBA88B222BBE060A95E&rrcfp=64220c93&x-expires=1795582997&x-signature=aTqRFP3IdDIgBt6OElIX0ufEHk4%3D",
+      "expires": 1795583466,
+      "ok": true,
+      "album": "教育心理学",
+      "link": "https://www.doubao.com/podcast/d92b869a5855"
+    },
+    {
+      "id": "0b184ee0715f",
+      "title": "05 发展与教育真题考点分布",
+      "duration": 1015,
+      "audio": "https://p26-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/bb53829fd26648ee9822cc4bc1a67f37?lk3s=8e244e95&rcl=2026111813075112C2C85941ECAF5B1B5A&rrcfp=b2eaac72&x-expires=1795583684&x-signature=1xEbl9WDUenanaq0K1FVLdROFiw%3D",
+      "cover": "https://p26-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/ecb6f1632f2c4e7392006ca6f1ea6fa1~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=2026111813075112C2C85941ECAF5B1B5A&rrcfp=64220c93&x-expires=1795583283&x-signature=D3efMl33EpCKhzKgLdZhvXzxVi4%3D",
+      "expires": 1795583684,
+      "ok": true,
+      "album": "教育心理学",
+      "link": "https://www.doubao.com/podcast/0b184ee0715f"
     },
     {
       "id": "d5d3c6a1b30c",
@@ -236,8 +302,19 @@
       "link": "https://www.doubao.com/podcast/bf63a60303a4"
     },
     {
+      "id": "ea4cae53917c",
+      "title": "05 效度的计算与理解",
+      "duration": 1654,
+      "audio": "https://p9-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/6bd356dbedf348118d2f737464a77080?lk3s=8e244e95&rcl=202611181313127E1309E59E49576766B4&rrcfp=b2eaac72&x-expires=1795584284&x-signature=pGlYY7LwWaAdUCLbP3CBfxoE0dE%3D",
+      "cover": "https://p26-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/44afc038ea504c939943e1780c31ea6d~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=202611181313127E1309E59E49576766B4&rrcfp=64220c93&x-expires=1795583604&x-signature=ZIXQKA3tXCMO%2FKWe4vfq6Za4suU%3D",
+      "expires": 1795584284,
+      "ok": true,
+      "album": "心理统计与测量",
+      "link": "https://www.doubao.com/podcast/ea4cae53917c"
+    },
+    {
       "id": "f21458d8cc4e",
-      "title": "05 常模",
+      "title": "06 常模",
       "duration": 858,
       "audio": "https://p6-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/04cfda3b27a0422fbd655b866807eed4?lk3s=8e244e95&rcl=2026111612105237F7D8F4BA557847BABC&rrcfp=b2eaac72&x-expires=1795407372&x-signature=mL8rSx7SArLpBGA3qymStwPEkco%3D",
       "cover": "https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/9c42b5b45f9d4d68a58f296d02ddd5bc~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=2026111612105237F7D8F4BA557847BABC&rrcfp=64220c93&x-expires=1795407065&x-signature=x804ZE0IlgWGKBq4NySAJxwKKOg%3D",
@@ -248,7 +325,7 @@
     },
     {
       "id": "522d500a714e",
-      "title": "06 标准误及其用途",
+      "title": "07 标准误及其用途",
       "duration": 511,
       "audio": "https://p3-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/1c4b4150008f4c4e909803e93fd5cca7?lk3s=8e244e95&rcl=20261115185707A81F8DB58BA3C4F20CCA&rrcfp=b2eaac72&x-expires=1795345230&x-signature=O0fJQdOmkCK7xt18RT3ghOmw2%2BA%3D",
       "cover": "https://p11-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/4c307887d72641dc8d65a49d122ebfcf~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=20261115185707A81F8DB58BA3C4F20CCA&rrcfp=64220c93&x-expires=1795345041&x-signature=dvvR6RRMm4D15Fu3qg%2BekcxgG9k%3D",
@@ -259,7 +336,7 @@
     },
     {
       "id": "0b9c9aa9d7e7",
-      "title": "07 假设检验：从框架到考点",
+      "title": "08 假设检验：从框架到考点",
       "duration": 597,
       "audio": "https://p9-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/961e32284d8a4b04b1f1376e56b5707d?lk3s=8e244e95&rcl=20261115184848352C4F47577654F12400&rrcfp=b2eaac72&x-expires=1795344777&x-signature=NLRNbaXa5kidRsZ0hzk7U9OMmWc%3D",
       "cover": "https://p11-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/36a6f462862d41c8bde79e1768c8e07f~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=20261115184848352C4F47577654F12400&rrcfp=64220c93&x-expires=1795344542&x-signature=AEQVOYM2s7T7H1Fp5l04IvZQJqk%3D",
@@ -270,7 +347,7 @@
     },
     {
       "id": "83f66d715ed1",
-      "title": "08 σ 与 S 在 t 检验中的应用",
+      "title": "09 σ 与 S 在 t 检验中的应用",
       "duration": 558,
       "audio": "https://p3-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/e01569d08b264a01b25810f47984b87b?lk3s=8e244e95&rcl=20261115190229D0C24FCCC508BEF22BCC&rrcfp=b2eaac72&x-expires=1795345573&x-signature=c9vjgmA8ouAsV68xL1GnCu6xFCQ%3D",
       "cover": "https://p11-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/fe42c960c58a452d8aa60323d38c8b25~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=20261115190229D0C24FCCC508BEF22BCC&rrcfp=64220c93&x-expires=1795345362&x-signature=4OH58bIn%2B%2BxAFIjfy8lv4LtVWqc%3D",
@@ -281,7 +358,7 @@
     },
     {
       "id": "5f36bcd15e83",
-      "title": "09 三种 t 检验",
+      "title": "10 三种 t 检验",
       "duration": 1147,
       "audio": "https://p6-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/ebf8859f61794381a5d9b3067399dec0?lk3s=8e244e95&rcl=2026111612154522344A9314D0453EDEA8&rrcfp=b2eaac72&x-expires=1795407837&x-signature=sNXzqf9f%2BIjOQE1L50BW1uXDQcI%3D",
       "cover": "https://p26-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/bbb046c73dc941119fdeb6c2648bd1a9~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=2026111612154522344A9314D0453EDEA8&rrcfp=64220c93&x-expires=1795407358&x-signature=ZkPW01HctAA2G2Cfy8aor27rPMk%3D",
@@ -292,7 +369,7 @@
     },
     {
       "id": "e211dafab371",
-      "title": "10 不同样本的 t 检验怎么用",
+      "title": "11 不同样本的 t 检验怎么用",
       "duration": 432,
       "audio": "https://p6-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/c105a46a830d47bb93ae88db2ce699bc?lk3s=8e244e95&rcl=202611161217018E1318713E31943C3587&rrcfp=b2eaac72&x-expires=1795407580&x-signature=wrXcRUHmfSn7%2BdiL%2FopbJlaB1S8%3D",
       "cover": "https://p11-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/52a84e3a023f4dc7ab161fed53fdbf64~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=202611161217018E1318713E31943C3587&rrcfp=64220c93&x-expires=1795407432&x-signature=3QypP3qOH1984PurQli1GZjZdsQ%3D",
@@ -303,7 +380,7 @@
     },
     {
       "id": "00a4d78cf5b6",
-      "title": "11 理解决定系数的含义",
+      "title": "12 理解决定系数的含义",
       "duration": 382,
       "audio": "https://p9-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/d9fe94967fa347d9852666655ac70cde?lk3s=8e244e95&rcl=2026111517472359AE763F16A8A8E87930&rrcfp=b2eaac72&x-expires=1795340993&x-signature=OC4L1yM7Ji0rrUVHTPqNbnDm7uA%3D",
       "cover": "https://p6-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/149717dd33ae4edbb9052810659e884c~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=2026111517472359AE763F16A8A8E87930&rrcfp=64220c93&x-expires=1795340860&x-signature=e7qS5wlFIUvXpc8YZEEMqt8Vm3o%3D",
@@ -314,7 +391,7 @@
     },
     {
       "id": "745e64aad117",
-      "title": "12 心理统计与测量重点梳理",
+      "title": "13 心理统计与测量重点梳理",
       "duration": 285,
       "audio": "https://p3-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/47761d1fee2c4a26939ceaf19da4f0ac?lk3s=8e244e95&rcl=2026111518462139606F6F6AF59EF067AA&rrcfp=b2eaac72&x-expires=1795344495&x-signature=%2FkkJtbABUmPCXv69SxMmE8V1Vvw%3D",
       "cover": "https://p26-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/6e6a4a0f7e8c4d54a7f73b192431e3d3~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=2026111518462139606F6F6AF59EF067AA&rrcfp=64220c93&x-expires=1795344393&x-signature=PzteQmTOS87jWQHiDwfwsEbxqcY%3D",
@@ -322,6 +399,29 @@
       "ok": true,
       "album": "心理统计与测量",
       "link": "https://www.doubao.com/podcast/745e64aad117"
+    },
+    {
+      "id": "a314ebcf6a89",
+      "title": "01 马原",
+      "album": "政治101",
+      "duration": 0,
+      "audio": "",
+      "cover": "",
+      "expires": 0,
+      "ok": false,
+      "error": "分享链接已失效（豆包生成失败或分享过期）",
+      "link": "https://www.doubao.com/podcast/a314ebcf6a89"
+    },
+    {
+      "id": "82f37d30f7d3",
+      "title": "02 思修法基的主要内容",
+      "duration": 700,
+      "audio": "https://p26-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/8bfb0954eea24ab69157ababa6d4957f?lk3s=8e244e95&rcl=2026111813240351D4F0E74D71905EC78F&rrcfp=b2eaac72&x-expires=1795584521&x-signature=fC3JE5RG6cW09B4CvluDEIJiHHo%3D",
+      "cover": "https://p6-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/1933bebcadc342fcac9dd6a9fcc37a1e~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=2026111813240351D4F0E74D71905EC78F&rrcfp=64220c93&x-expires=1795584255&x-signature=YVM7DQU5kNnwANklPeBlkSN543o%3D",
+      "expires": 1795584521,
+      "ok": true,
+      "album": "政治101",
+      "link": "https://www.doubao.com/podcast/82f37d30f7d3"
     }
   ]
 }

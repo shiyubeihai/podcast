@@ -153,6 +153,9 @@ export async function fetchEpisode(token) {
 
       const ep = inner.episode;
       if (!ep) throw new Error('没有 episode 数据');
+      if (inner.podcast_gen_status === 4) {
+        throw new Error('分享链接已失效（豆包生成失败或分享过期）');
+      }
       if (inner.podcast_gen_status !== 3) throw new Error('还在生成中，稍后再试');
 
       const meta = ep.meta || {};
@@ -256,7 +259,7 @@ async function main() {
       } else {
         items.push({
           id: l.token,
-          title: l.album ? `${l.album}（未取到）` : `未取到 ${l.token.slice(0, 6)}`,
+          title: l.title || (l.album ? `${l.album}（未取到）` : `未取到 ${l.token.slice(0, 6)}`),
           album: l.album || '未分组',
           duration: 0,
           audio: '',
