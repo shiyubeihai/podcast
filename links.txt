@@ -5,22 +5,24 @@
 
 # ---------- 普通心理学（淡蓝） ----------
 普通心理学 | 01 普通心理学：打通底层线 | https://www.doubao.com/podcast/01bc4276dbdd
-普通心理学 | 02 《普通心理学：感觉与知觉》 | https://www.doubao.com/podcast/08e8d5526564
-普通心理学 | 03 听觉单位系统的层次框架 | https://www.doubao.com/podcast/b923f684efea
-普通心理学 | 04 特征分析理论的经典实验 | https://www.doubao.com/podcast/d20519a2475a
-普通心理学 | 05 特征整合理论：特征如何整合与绑定 | https://www.doubao.com/podcast/637f15a4d93a
-普通心理学 | 06 模式识别理论：高频考点与结合方向 | https://www.doubao.com/podcast/e40b7300d0b4
-普通心理学 | 07 梳理注意的认知理论 | https://www.doubao.com/podcast/22f489a0b9fb
-普通心理学 | 08 推理中常见的系统性偏差 | https://www.doubao.com/podcast/8606a26d4515
-普通心理学 | 09 梳理「影响问题解决的因素」 | https://www.doubao.com/podcast/260b897f1d11
-普通心理学 | 10 动机理论的四大关键理论解析 | https://www.doubao.com/podcast/f18395e7272e
-普通心理学 | 11 动机理论的「新」发展梳理 | https://www.doubao.com/podcast/0d0a61338b9a
-普通心理学 | 12 新兴动机理论与游戏化学习（拓展） | https://www.doubao.com/podcast/e0d8237a0555
-普通心理学 | 13 情绪理论：从生理到认知的演进（一） | https://www.doubao.com/podcast/a569531cb256
-普通心理学 | 14 情绪理论：从生理到认知的演进（二） | https://www.doubao.com/podcast/0602f5c54dbc
-普通心理学 | 15 智力的主要理论梳理 | https://www.doubao.com/podcast/56809e2647e6
-普通心理学 | 16 经典条件与操作条件全面对比 | https://www.doubao.com/podcast/ac4376ef7c34
-普通心理学 | 17 社会心理学 8 大块记忆卡 | https://www.doubao.com/podcast/fcfc8ae210b3
+普通心理学 | 02 《普通心理学：感觉与知觉》 | https://www.doubao.com/podcast/14e0aade7d29
+普通心理学 | 03 普通心理学：思维与语言 | https://www.doubao.com/podcast/fa022deb04aa
+普通心理学 | 04 普通心理学：动机与能力 | https://www.doubao.com/podcast/d6bddfe656f6
+普通心理学 | 05 听觉单位系统的层次框架 | https://www.doubao.com/podcast/b923f684efea
+普通心理学 | 06 特征分析理论的经典实验 | https://www.doubao.com/podcast/d20519a2475a
+普通心理学 | 07 特征整合理论：特征如何整合与绑定 | https://www.doubao.com/podcast/637f15a4d93a
+普通心理学 | 08 模式识别理论：高频考点与结合方向 | https://www.doubao.com/podcast/e40b7300d0b4
+普通心理学 | 09 梳理注意的认知理论 | https://www.doubao.com/podcast/22f489a0b9fb
+普通心理学 | 10 推理中常见的系统性偏差 | https://www.doubao.com/podcast/8606a26d4515
+普通心理学 | 11 梳理「影响问题解决的因素」 | https://www.doubao.com/podcast/260b897f1d11
+普通心理学 | 12 动机理论的四大关键理论解析 | https://www.doubao.com/podcast/f18395e7272e
+普通心理学 | 13 动机理论的「新」发展梳理 | https://www.doubao.com/podcast/0d0a61338b9a
+普通心理学 | 14 新兴动机理论与游戏化学习（拓展） | https://www.doubao.com/podcast/e0d8237a0555
+普通心理学 | 15 情绪理论：从生理到认知的演进（一） | https://www.doubao.com/podcast/a569531cb256
+普通心理学 | 16 情绪理论：从生理到认知的演进（二） | https://www.doubao.com/podcast/0602f5c54dbc
+普通心理学 | 17 智力的主要理论梳理 | https://www.doubao.com/podcast/56809e2647e6
+普通心理学 | 18 经典条件与操作条件全面对比 | https://www.doubao.com/podcast/ac4376ef7c34
+普通心理学 | 19 社会心理学 8 大块记忆卡 | https://www.doubao.com/podcast/fcfc8ae210b3
 
 # ---------- 发展心理学（橙） ----------
 发展心理学 | 01 发展心理学阶段领域纵向总表 | https://www.doubao.com/podcast/169d716df103

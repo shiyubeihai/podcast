@@ -1,59 +1,65 @@
 播客台 · 节目清单
-导出时间：2026/11/18 15:14:03
-共 40 集（可听 39 集），可听时长 505 分 30 秒
+导出时间：2026/11/19 12:06:20
+共 42 集（可听 41 集），可听时长 591 分 19 秒
 音频地址约 7 天过期，由工具自动续期；本清单只记录标题和分享链接。
 
-【普通心理学】 17 集 · 201 分钟
+【普通心理学】 19 集 · 286 分钟
 
 01  普通心理学：打通底层线
     24:57    https://www.doubao.com/podcast/01bc4276dbdd
 
 02  《普通心理学：感觉与知觉》
-    还在生成中，稍后再试    https://www.doubao.com/podcast/08e8d5526564
+    44:34    https://www.doubao.com/podcast/14e0aade7d29
 
-03  听觉单位系统的层次框架
+03  普通心理学：思维与语言
+    41:15    https://www.doubao.com/podcast/fa022deb04aa
+
+04  普通心理学：动机与能力
+    还在生成中，稍后再试    https://www.doubao.com/podcast/d6bddfe656f6
+
+05  听觉单位系统的层次框架
     11:56    https://www.doubao.com/podcast/b923f684efea
 
-04  特征分析理论的经典实验
+06  特征分析理论的经典实验
     10:06    https://www.doubao.com/podcast/d20519a2475a
 
-05  特征整合理论：特征如何整合与绑定
+07  特征整合理论：特征如何整合与绑定
     9:09    https://www.doubao.com/podcast/637f15a4d93a
 
-06  模式识别理论：高频考点与结合方向
+08  模式识别理论：高频考点与结合方向
     11:18    https://www.doubao.com/podcast/e40b7300d0b4
 
-07  梳理注意的认知理论
+09  梳理注意的认知理论
     8:59    https://www.doubao.com/podcast/22f489a0b9fb
 
-08  推理中常见的系统性偏差
+10  推理中常见的系统性偏差
     17:32    https://www.doubao.com/podcast/8606a26d4515
 
-09  梳理「影响问题解决的因素」
+11  梳理「影响问题解决的因素」
     9:25    https://www.doubao.com/podcast/260b897f1d11
 
-10  动机理论的四大关键理论解析
+12  动机理论的四大关键理论解析
     16:38    https://www.doubao.com/podcast/f18395e7272e
 
-11  动机理论的「新」发展梳理
+13  动机理论的「新」发展梳理
     11:05    https://www.doubao.com/podcast/0d0a61338b9a
 
-12  新兴动机理论与游戏化学习（拓展）
+14  新兴动机理论与游戏化学习（拓展）
     6:56    https://www.doubao.com/podcast/e0d8237a0555
 
-13  情绪理论：从生理到认知的演进（一）
+15  情绪理论：从生理到认知的演进（一）
     15:21    https://www.doubao.com/podcast/a569531cb256
 
-14  情绪理论：从生理到认知的演进（二）
+16  情绪理论：从生理到认知的演进（二）
     15:40    https://www.doubao.com/podcast/0602f5c54dbc
 
-15  智力的主要理论梳理
+17  智力的主要理论梳理
     10:43    https://www.doubao.com/podcast/56809e2647e6
 
-16  经典条件与操作条件全面对比
+18  经典条件与操作条件全面对比
     9:49    https://www.doubao.com/podcast/ac4376ef7c34
 
-17  社会心理学 8 大块记忆卡
+19  社会心理学 8 大块记忆卡
     11:06    https://www.doubao.com/podcast/fcfc8ae210b3
 
 【发展心理学】 3 集 · 63 分钟
