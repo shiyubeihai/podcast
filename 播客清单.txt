@@ -1,9 +1,9 @@
 播客台 · 节目清单
-导出时间：2026/11/19 12:06:20
-共 42 集（可听 41 集），可听时长 591 分 19 秒
+导出时间：2026/11/20 12:13:41
+共 46 集（可听 46 集），可听时长 674 分 24 秒
 音频地址约 7 天过期，由工具自动续期；本清单只记录标题和分享链接。
 
-【普通心理学】 19 集 · 286 分钟
+【普通心理学】 19 集 · 341 分钟
 
 01  普通心理学：打通底层线
     24:57    https://www.doubao.com/podcast/01bc4276dbdd
@@ -15,7 +15,7 @@
     41:15    https://www.doubao.com/podcast/fa022deb04aa
 
 04  普通心理学：动机与能力
-    还在生成中，稍后再试    https://www.doubao.com/podcast/d6bddfe656f6
+    54:33    https://www.doubao.com/podcast/d6bddfe656f6
 
 05  听觉单位系统的层次框架
     11:56    https://www.doubao.com/podcast/b923f684efea
@@ -131,10 +131,22 @@
 13  心理统计与测量重点梳理
     4:45    https://www.doubao.com/podcast/745e64aad117
 
-【政治101】 2 集 · 43 分钟
+【政治101】 6 集 · 72 分钟
 
 01  马克思主义哲学基本内容
     31:31    https://www.doubao.com/podcast/0a99b4e192a6
 
-02  思修法基的主要内容
+02  解析马克思剩余价值理论核心
+    7:52    https://www.doubao.com/podcast/9276dd55d5f0
+
+03  解析资本主义经济危机与生产价格
+    5:59    https://www.doubao.com/podcast/d033450335c6
+
+04  解析垄断利润的形成
+    7:43    https://www.doubao.com/podcast/136115e98bf2
+
+05  《考研政治马原核心概念梳理》
+    6:58    https://www.doubao.com/podcast/64ffe8741917
+
+06  思修法基的主要内容
     11:40    https://www.doubao.com/podcast/82f37d30f7d3

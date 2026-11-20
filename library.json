@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "updatedAt": "2026-11-19T04:06:12.608Z",
-  "count": 42,
-  "failed": 1,
+  "updatedAt": "2026-11-20T04:13:34.620Z",
+  "count": 46,
+  "failed": 0,
   "items": [
     {
       "id": "01bc4276dbdd",
@@ -40,13 +40,12 @@
     {
       "id": "d6bddfe656f6",
       "title": "04 普通心理学：动机与能力",
+      "duration": 3273,
+      "audio": "https://p3-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/c5a7e495e230403f87c273d72ef4d720?lk3s=8e244e95&rcl=20261119114857CC88BB5E8F8373DC38D3&rrcfp=b2eaac72&x-expires=1795666244&x-signature=yJH95lK3KY7tu17rqp0qbehpRIU%3D",
+      "cover": "https://p26-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/ea9a59e3dab2458391b2976fa1f333d8~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=20261119114857CC88BB5E8F8373DC38D3&rrcfp=64220c93&x-expires=1795664947&x-signature=jKKxJuBqxfxPyITlDajLjz%2Fm0Qw%3D",
+      "expires": 1795666244,
+      "ok": true,
       "album": "普通心理学",
-      "duration": 0,
-      "audio": "",
-      "cover": "",
-      "expires": 0,
-      "ok": false,
-      "error": "还在生成中，稍后再试",
       "link": "https://www.doubao.com/podcast/d6bddfe656f6"
     },
     {
@@ -457,8 +456,52 @@
       "link": "https://www.doubao.com/podcast/0a99b4e192a6"
     },
     {
+      "id": "9276dd55d5f0",
+      "title": "02 解析马克思剩余价值理论核心",
+      "duration": 472,
+      "audio": "https://p3-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/5575aecfb960450e80c91c5aa3279041?lk3s=8e244e95&rcl=202611201104204A78B15DF8B44253F1B8&rrcfp=b2eaac72&x-expires=1795748859&x-signature=wXilEf5bwT0g1UdRwDB5FwLK1Ro%3D",
+      "cover": "https://p11-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/27752bedec6f4d6e8494af844bf67aad~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=202611201104204A78B15DF8B44253F1B8&rrcfp=64220c93&x-expires=1795748675&x-signature=go2gX%2BhvZyKP3ViQnod2xKbmBAE%3D",
+      "expires": 1795748859,
+      "ok": true,
+      "album": "政治101",
+      "link": "https://www.doubao.com/podcast/9276dd55d5f0"
+    },
+    {
+      "id": "d033450335c6",
+      "title": "03 解析资本主义经济危机与生产价格",
+      "duration": 359,
+      "audio": "https://p3-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/3348e51a94e74a58adfddb7f86828f76?lk3s=8e244e95&rcl=20261120114930FCDA0777C3B87472C94C&rrcfp=b2eaac72&x-expires=1795751522&x-signature=9Kra%2BoDIAkHV05BLN9qfHHha2Y0%3D",
+      "cover": "https://p6-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/ea3bd51b3f314a328f253755eb7a9a44~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=20261120114930FCDA0777C3B87472C94C&rrcfp=64220c93&x-expires=1795751384&x-signature=1D6WpShJD0YeqdyaKdlKNZorokA%3D",
+      "expires": 1795751522,
+      "ok": true,
+      "album": "政治101",
+      "link": "https://www.doubao.com/podcast/d033450335c6"
+    },
+    {
+      "id": "136115e98bf2",
+      "title": "04 解析垄断利润的形成",
+      "duration": 463,
+      "audio": "https://p3-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/4e5a85c2b02b47feb5d7f79950f49559?lk3s=8e244e95&rcl=202611201205413FDCE7FF6C71B4748EBD&rrcfp=b2eaac72&x-expires=1795752526&x-signature=nX%2BNKw80v9hf84kGFnKEzpyZKW8%3D",
+      "cover": "https://p26-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/ef205599ba9f43aeb307423020b67747~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=202611201205413FDCE7FF6C71B4748EBD&rrcfp=64220c93&x-expires=1795752355&x-signature=KtguhBOP0qHavpYeuKPTIop9fo8%3D",
+      "expires": 1795752526,
+      "ok": true,
+      "album": "政治101",
+      "link": "https://www.doubao.com/podcast/136115e98bf2"
+    },
+    {
+      "id": "64ffe8741917",
+      "title": "05 《考研政治马原核心概念梳理》",
+      "duration": 418,
+      "audio": "https://p9-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/80d50379e9524e9db1002e29b5d051d5?lk3s=8e244e95&rcl=202611201052041ED85173B209645DA945&rrcfp=b2eaac72&x-expires=1795748101&x-signature=UXJB2pKcJtJEKDAxMm9gmYdftaQ%3D",
+      "cover": "https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/daa5453f28514e8b95c36fc40eadf2f7~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=202611201052041ED85173B209645DA945&rrcfp=64220c93&x-expires=1795747940&x-signature=GJg9ppB0Jv873Ja4xZabEeClX%2Fs%3D",
+      "expires": 1795748101,
+      "ok": true,
+      "album": "政治101",
+      "link": "https://www.doubao.com/podcast/64ffe8741917"
+    },
+    {
       "id": "82f37d30f7d3",
-      "title": "02 思修法基的主要内容",
+      "title": "06 思修法基的主要内容",
       "duration": 700,
       "audio": "https://p26-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/rc/deep_research/8bfb0954eea24ab69157ababa6d4957f?lk3s=8e244e95&rcl=2026111813240351D4F0E74D71905EC78F&rrcfp=b2eaac72&x-expires=1795584521&x-signature=fC3JE5RG6cW09B4CvluDEIJiHHo%3D",
       "cover": "https://p6-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/deep_research/1933bebcadc342fcac9dd6a9fcc37a1e~tplv-a9rns2rl98-24:1280:720.image?lk3s=8e244e95&rcl=2026111813240351D4F0E74D71905EC78F&rrcfp=64220c93&x-expires=1795584255&x-signature=YVM7DQU5kNnwANklPeBlkSN543o%3D",

@@ -3,7 +3,7 @@
  * library.json 和音频始终走网络，避免读到过期的签名地址。
  * 改 index.html 后必须把 VERSION +1，否则手机上还是旧版。
  */
-const VERSION = '2.4.3';
+const VERSION = '2.4.4';
 const CACHE = 'podcast-' + VERSION;
 
 const ASSETS = [
