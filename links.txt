@@ -36,9 +36,13 @@
 教育心理学 | 02 托尔曼符号学习理论解析 | https://www.doubao.com/podcast/63334879962c
 教育心理学 | 03 顿悟学习与潜伏学习的互补性 | https://www.doubao.com/podcast/d1c4705e2f08
 教育心理学 | 04 学习策略的分类及相互关系 | https://www.doubao.com/podcast/beb8a043efcf
-教育心理学 | 05 布鲁姆与加涅教学目标对比 | https://www.doubao.com/podcast/36349158bbab
-教育心理学 | 06 教育心理学核心要点背诵版 | https://www.doubao.com/podcast/d92b869a5855
-教育心理学 | 07 发展与教育真题考点分布 | https://www.doubao.com/podcast/0b184ee0715f
+教育心理学 | 05 过度学习：提升记忆的关键策略 | https://www.doubao.com/podcast/10010168275c
+教育心理学 | 06 解析技能学习中的三要素 | https://www.doubao.com/podcast/8a4e45a8bde8
+教育心理学 | 07 菲茨-波斯纳三阶段理论解析 | https://www.doubao.com/podcast/8da1b69f834d
+教育心理学 | 08 布鲁姆与加涅教学目标对比 | https://www.doubao.com/podcast/36349158bbab
+教育心理学 | 09 布鲁姆与加涅理论的深度融合 | https://www.doubao.com/podcast/c551919e7361
+教育心理学 | 10 教育心理学核心要点背诵版 | https://www.doubao.com/podcast/d92b869a5855
+教育心理学 | 11 发展与教育真题考点分布 | https://www.doubao.com/podcast/0b184ee0715f
 
 # ---------- 心理统计与测量（粉） ----------
 心理统计与测量 | 01 信度与五种误差 | https://www.doubao.com/podcast/d5d3c6a1b30c
