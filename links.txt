@@ -4,60 +4,60 @@
 # 列表按这里的顺序显示，专辑按第一次出现的顺序排列。
 
 # ---------- 普通心理学（淡蓝） ----------
-普通心理学 | 01 普通心理学：打通底层线 | https://www.doubao.com/podcast/01bc4276dbdd
-普通心理学 | 02 脑机能学说的核心对比 | https://www.doubao.com/podcast/c254c2d832f9
-普通心理学 | 03 《普通心理学：感觉与知觉》 | https://www.doubao.com/podcast/14e0aade7d29
-普通心理学 | 04 普通心理学：思维与语言 | https://www.doubao.com/podcast/fa022deb04aa
-普通心理学 | 05 普通心理学：动机与能力 | https://www.doubao.com/podcast/d6bddfe656f6
-普通心理学 | 06 听觉单位系统的层次框架 | https://www.doubao.com/podcast/b923f684efea
-普通心理学 | 07 特征分析理论的经典实验 | https://www.doubao.com/podcast/d20519a2475a
-普通心理学 | 08 特征整合理论：特征如何整合与绑定 | https://www.doubao.com/podcast/637f15a4d93a
-普通心理学 | 09 模式识别理论：高频考点与结合方向 | https://www.doubao.com/podcast/e40b7300d0b4
-普通心理学 | 10 梳理注意的认知理论 | https://www.doubao.com/podcast/22f489a0b9fb
-普通心理学 | 11 推理中常见的系统性偏差 | https://www.doubao.com/podcast/8606a26d4515
-普通心理学 | 12 梳理「影响问题解决的因素」 | https://www.doubao.com/podcast/260b897f1d11
-普通心理学 | 13 动机理论的四大关键理论解析 | https://www.doubao.com/podcast/f18395e7272e
-普通心理学 | 14 动机理论的「新」发展梳理 | https://www.doubao.com/podcast/0d0a61338b9a
-普通心理学 | 15 新兴动机理论与游戏化学习（拓展） | https://www.doubao.com/podcast/e0d8237a0555
-普通心理学 | 16 情绪理论：从生理到认知的演进（一） | https://www.doubao.com/podcast/a569531cb256
-普通心理学 | 17 情绪理论：从生理到认知的演进（二） | https://www.doubao.com/podcast/0602f5c54dbc
-普通心理学 | 18 智力的主要理论梳理 | https://www.doubao.com/podcast/56809e2647e6
-普通心理学 | 19 经典条件与操作条件全面对比 | https://www.doubao.com/podcast/ac4376ef7c34
-普通心理学 | 20 社会心理学 8 大块记忆卡 | https://www.doubao.com/podcast/fcfc8ae210b3
+普通心理学 | ★★ 01 普通心理学：打通底层线 | https://www.doubao.com/podcast/01bc4276dbdd
+普通心理学 | ★ 02 脑机能学说的核心对比 | https://www.doubao.com/podcast/c254c2d832f9
+普通心理学 | ★★ 03 《普通心理学：感觉与知觉》 | https://www.doubao.com/podcast/14e0aade7d29
+普通心理学 | ★★ 04 普通心理学：思维与语言 | https://www.doubao.com/podcast/fa022deb04aa
+普通心理学 | ★★ 05 普通心理学：动机与能力 | https://www.doubao.com/podcast/d6bddfe656f6
+普通心理学 | ★★ 06 听觉单位系统的层次框架 | https://www.doubao.com/podcast/b923f684efea
+普通心理学 | ★★ 07 特征分析理论的经典实验 | https://www.doubao.com/podcast/d20519a2475a
+普通心理学 | ★★ 08 特征整合理论：特征如何整合与绑定 | https://www.doubao.com/podcast/637f15a4d93a
+普通心理学 | ★★ 09 模式识别理论：高频考点与结合方向 | https://www.doubao.com/podcast/e40b7300d0b4
+普通心理学 | ★★ 10 梳理注意的认知理论 | https://www.doubao.com/podcast/22f489a0b9fb
+普通心理学 | ★★ 11 推理中常见的系统性偏差 | https://www.doubao.com/podcast/8606a26d4515
+普通心理学 | ★★ 12 梳理「影响问题解决的因素」 | https://www.doubao.com/podcast/260b897f1d11
+普通心理学 | ★★ 13 动机理论的四大关键理论解析 | https://www.doubao.com/podcast/f18395e7272e
+普通心理学 | ★★ 14 动机理论的「新」发展梳理 | https://www.doubao.com/podcast/0d0a61338b9a
+普通心理学 | ★ 15 新兴动机理论与游戏化学习（拓展） | https://www.doubao.com/podcast/e0d8237a0555
+普通心理学 | ★ 16 情绪理论：从生理到认知的演进（一） | https://www.doubao.com/podcast/a569531cb256
+普通心理学 | ★ 17 情绪理论：从生理到认知的演进（二） | https://www.doubao.com/podcast/0602f5c54dbc
+普通心理学 | ★★ 18 智力的主要理论梳理 | https://www.doubao.com/podcast/56809e2647e6
+普通心理学 | ★★ 19 经典条件与操作条件全面对比 | https://www.doubao.com/podcast/ac4376ef7c34
+普通心理学 | ★ 20 社会心理学 8 大块记忆卡 | https://www.doubao.com/podcast/fcfc8ae210b3
 
 # ---------- 发展心理学（橙） ----------
-发展心理学 | 01 发展心理学阶段领域纵向总表 | https://www.doubao.com/podcast/169d716df103
-发展心理学 | 02 皮亚杰与维果茨基理论比较 | https://www.doubao.com/podcast/6e1d149dfb96
-发展心理学 | 03 皮亚杰认知发展四阶段解析 | https://www.doubao.com/podcast/547d9129938e
-发展心理学 | 04 发展心理学核心要点背诵版 | https://www.doubao.com/podcast/9ebf1626e816
+发展心理学 | ★ 01 发展心理学阶段领域纵向总表 | https://www.doubao.com/podcast/169d716df103
+发展心理学 | ★★★ 02 皮亚杰与维果茨基理论比较 | https://www.doubao.com/podcast/6e1d149dfb96
+发展心理学 | ★★★ 03 皮亚杰认知发展四阶段解析 | https://www.doubao.com/podcast/547d9129938e
+发展心理学 | ★★ 04 发展心理学核心要点背诵版 | https://www.doubao.com/podcast/9ebf1626e816
 
 # ---------- 教育心理学（橙） ----------
-教育心理学 | 01 教育心理学：理论与启示速查 | https://www.doubao.com/podcast/74dc3051a343
-教育心理学 | 02 托尔曼符号学习理论解析 | https://www.doubao.com/podcast/63334879962c
-教育心理学 | 03 顿悟学习与潜伏学习的互补性 | https://www.doubao.com/podcast/d1c4705e2f08
-教育心理学 | 04 学习策略的分类及相互关系 | https://www.doubao.com/podcast/beb8a043efcf
-教育心理学 | 05 过度学习：提升记忆的关键策略 | https://www.doubao.com/podcast/10010168275c
-教育心理学 | 06 解析技能学习中的三要素 | https://www.doubao.com/podcast/8a4e45a8bde8
-教育心理学 | 07 菲茨-波斯纳三阶段理论解析 | https://www.doubao.com/podcast/8da1b69f834d
-教育心理学 | 08 布鲁姆与加涅教学目标对比 | https://www.doubao.com/podcast/36349158bbab
-教育心理学 | 09 布鲁姆与加涅理论的深度融合 | https://www.doubao.com/podcast/c551919e7361
-教育心理学 | 10 教育心理学核心要点背诵版 | https://www.doubao.com/podcast/d92b869a5855
-教育心理学 | 11 发展与教育真题考点分布 | https://www.doubao.com/podcast/0b184ee0715f
+教育心理学 | ★★ 01 教育心理学：理论与启示速查 | https://www.doubao.com/podcast/74dc3051a343
+教育心理学 | ★★ 02 托尔曼符号学习理论解析 | https://www.doubao.com/podcast/63334879962c
+教育心理学 | ★★ 03 顿悟学习与潜伏学习的互补性 | https://www.doubao.com/podcast/d1c4705e2f08
+教育心理学 | ★★★ 04 学习策略的分类及相互关系 | https://www.doubao.com/podcast/beb8a043efcf
+教育心理学 | ★★★ 05 过度学习：提升记忆的关键策略 | https://www.doubao.com/podcast/10010168275c
+教育心理学 | ★★ 06 解析技能学习中的三要素 | https://www.doubao.com/podcast/8a4e45a8bde8
+教育心理学 | ★★ 07 菲茨-波斯纳三阶段理论解析 | https://www.doubao.com/podcast/8da1b69f834d
+教育心理学 | ★★ 08 布鲁姆与加涅教学目标对比 | https://www.doubao.com/podcast/36349158bbab
+教育心理学 | ★★ 09 布鲁姆与加涅理论的深度融合 | https://www.doubao.com/podcast/c551919e7361
+教育心理学 | ★★ 10 教育心理学核心要点背诵版 | https://www.doubao.com/podcast/d92b869a5855
+教育心理学 | ★★★ 11 发展与教育真题考点分布 | https://www.doubao.com/podcast/0b184ee0715f
 
 # ---------- 心理统计与测量（粉） ----------
-心理统计与测量 | 01 信度与五种误差 | https://www.doubao.com/podcast/d5d3c6a1b30c
-心理统计与测量 | 02 复本信度 | https://www.doubao.com/podcast/6fe64e8d9239
-心理统计与测量 | 03 α 系数（同质性信度） | https://www.doubao.com/podcast/4c954283d8a6
-心理统计与测量 | 04 效度与信度的关系及记忆口诀 | https://www.doubao.com/podcast/bf63a60303a4
-心理统计与测量 | 05 效度的计算与理解 | https://www.doubao.com/podcast/ea4cae53917c
-心理统计与测量 | 06 常模 | https://www.doubao.com/podcast/f21458d8cc4e
-心理统计与测量 | 07 标准误及其用途 | https://www.doubao.com/podcast/522d500a714e
-心理统计与测量 | 08 假设检验：从框架到考点 | https://www.doubao.com/podcast/0b9c9aa9d7e7
-心理统计与测量 | 09 σ 与 S 在 t 检验中的应用 | https://www.doubao.com/podcast/83f66d715ed1
-心理统计与测量 | 10 三种 t 检验 | https://www.doubao.com/podcast/5f36bcd15e83
-心理统计与测量 | 11 不同样本的 t 检验怎么用 | https://www.doubao.com/podcast/e211dafab371
-心理统计与测量 | 12 理解决定系数的含义 | https://www.doubao.com/podcast/00a4d78cf5b6
-心理统计与测量 | 13 心理统计与测量重点梳理 | https://www.doubao.com/podcast/745e64aad117
+心理统计与测量 | ★★ 01 信度与五种误差 | https://www.doubao.com/podcast/d5d3c6a1b30c
+心理统计与测量 | ★★ 02 复本信度 | https://www.doubao.com/podcast/6fe64e8d9239
+心理统计与测量 | ★★ 03 α 系数（同质性信度） | https://www.doubao.com/podcast/4c954283d8a6
+心理统计与测量 | ★★ 04 效度与信度的关系及记忆口诀 | https://www.doubao.com/podcast/bf63a60303a4
+心理统计与测量 | ★★ 05 效度的计算与理解 | https://www.doubao.com/podcast/ea4cae53917c
+心理统计与测量 | ★★★ 06 常模 | https://www.doubao.com/podcast/f21458d8cc4e
+心理统计与测量 | ★★ 07 标准误及其用途 | https://www.doubao.com/podcast/522d500a714e
+心理统计与测量 | ★★ 08 假设检验：从框架到考点 | https://www.doubao.com/podcast/0b9c9aa9d7e7
+心理统计与测量 | ★★★ 09 σ 与 S 在 t 检验中的应用 | https://www.doubao.com/podcast/83f66d715ed1
+心理统计与测量 | ★★★ 10 三种 t 检验 | https://www.doubao.com/podcast/5f36bcd15e83
+心理统计与测量 | ★★★ 11 不同样本的 t 检验怎么用 | https://www.doubao.com/podcast/e211dafab371
+心理统计与测量 | ★★★ 12 理解决定系数的含义 | https://www.doubao.com/podcast/00a4d78cf5b6
+心理统计与测量 | ★★★ 13 心理统计与测量重点梳理 | https://www.doubao.com/podcast/745e64aad117
 
 # ---------- 政治101（紫） ----------
 政治101 | 01 马克思主义哲学基本内容 | https://www.doubao.com/podcast/0a99b4e192a6
