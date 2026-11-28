@@ -1,0 +1,37 @@
+{
+  "note": "自己生成的播客。音频放在 self/ 下，文稿用同一目录的 txt。resolve.mjs 会把文稿内嵌进 library.json，所以离线也能看。",
+  "episodes": [
+    {
+      "slug": "建构主义",
+      "album": "教育心理学",
+      "title": "★★★ 12 建构主义：四大观点与教学模式",
+      "file": "self/建构主义.mp3",
+      "script": "self/建构主义-文稿.txt",
+      "duration": 702
+    },
+    {
+      "slug": "迁移理论六说",
+      "album": "教育心理学",
+      "title": "★★★ 13 迁移理论六说：六个理论一条线",
+      "file": "self/迁移理论六说.mp3",
+      "script": "self/迁移理论六说-文稿.txt",
+      "duration": 493
+    },
+    {
+      "slug": "四大全球倡议",
+      "album": "政治101",
+      "title": "★★★ 07 四大全球倡议与全球治理",
+      "file": "self/四大全球倡议.mp3",
+      "script": "self/四大全球倡议-文稿.txt",
+      "duration": 481
+    },
+    {
+      "slug": "限定词归属表",
+      "album": "政治101",
+      "title": "★★ 08 限定词归属表：22 个唯一答案",
+      "file": "self/限定词归属表.mp3",
+      "script": "self/限定词归属表-文稿.txt",
+      "duration": 421
+    }
+  ]
+}

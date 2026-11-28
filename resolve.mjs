@@ -19,6 +19,7 @@ const UA =
 
 const HERE = import.meta.dir;
 const LINKS = `${HERE}/links.txt`;
+const SELF = `${HERE}/self.json`;
 const OUT = `${HERE}/library.json`;
 const HTML = `${HERE}/index.html`;
 
@@ -115,6 +116,58 @@ export function getToken(link) {
   return '';
 }
 
+/* ---------- 自己生成的播客（self.json） ---------- */
+
+/**
+ * self.json 里登记自己合成的音频，不经过豆包接口：
+ *   { slug, album, title, file: "self/xxx.mp3", script: "self/xxx-文稿.txt", duration }
+ * 文稿整篇内嵌进 library.json，双击 html 也能看。
+ */
+export async function readSelf() {
+  const f = Bun.file(SELF);
+  if (!(await f.exists())) return [];
+
+  let cfg;
+  try {
+    cfg = await f.json();
+  } catch (e) {
+    log(`  ! self.json 格式不对：${e.message}`);
+    return [];
+  }
+
+  const out = [];
+  for (const ep of cfg.episodes || []) {
+    if (!ep || !ep.file || !ep.title) continue;
+
+    const audio = Bun.file(`${HERE}/${ep.file}`);
+    if (!(await audio.exists())) {
+      log(`  ✗ ${ep.title}（音频不见了：${ep.file}）`);
+      continue;
+    }
+
+    let text = '';
+    if (ep.script) {
+      text = await Bun.file(`${HERE}/${ep.script}`).text().catch(() => '');
+    }
+
+    out.push({
+      id: 'self:' + (ep.slug || ep.file),
+      title: ep.title,
+      album: ep.album || '未分组',
+      duration: Number(ep.duration) || 0,
+      audio: ep.file,
+      cover: '',
+      expires: 0,
+      ok: true,
+      self: true,
+      text: text.trim(),
+      link: ''
+    });
+    log(`  ✦ ${ep.title} · ${Math.round((Number(ep.duration) || 0) / 60)} 分 · 文稿 ${text.length} 字`);
+  }
+  return out;
+}
+
 /* ---------- 调豆包接口 ---------- */
 
 export async function fetchEpisode(token) {
@@ -186,9 +239,10 @@ export async function fetchEpisode(token) {
 async function main() {
   const linksText = await Bun.file(LINKS).text().catch(() => '');
   const links = readLinks(linksText);
+  const selfItems = await readSelf();
 
-  if (!links.length) {
-    log('links.txt 里没有可用链接，写出空清单');
+  if (!links.length && !selfItems.length) {
+    log('links.txt 和 self.json 里都没有内容，写出空清单');
   }
 
   // 读旧清单：刷新失败时，旧的链接如果还没过期就继续用
@@ -273,6 +327,9 @@ async function main() {
       }
     }
   }
+
+  // 自己生成的接在末尾。页面按专辑归并，所以它们会落在对应专辑的最后。
+  items.push(...selfItems);
 
   const out = {
     schema: 1,
